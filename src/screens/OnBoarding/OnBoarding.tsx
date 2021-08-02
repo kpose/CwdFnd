@@ -65,6 +65,7 @@ const OnBoarding = () => {
                   justifyContent: 'center',
                 }}>
                 <Image
+                  testID="onboardingImage"
                   source={item.image}
                   style={{
                     width: width / 2,
