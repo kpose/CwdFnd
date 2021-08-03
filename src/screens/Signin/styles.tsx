@@ -19,12 +19,16 @@ const styles = StyleSheet.create({
     marginBottom: hp(5),
   },
   inputContainer: {
-    marginTop: hp(10),
+    marginTop: hp(7),
     alignSelf: 'center',
+    marginLeft: wp(5),
+    marginRight: wp(5),
   },
   email: {
     width: wp(90),
-    marginBottom: hp(3),
+    marginBottom: hp(0.5),
+    alignSelf: 'center',
+    marginTop: hp(2),
   },
   forgot: {
     textAlign: 'right',
@@ -44,6 +48,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: hp(1),
     left: wp(2),
+  },
+  validatorIcon: {
+    marginRight: wp(2),
+    marginLeft: wp(2),
   },
 });
 

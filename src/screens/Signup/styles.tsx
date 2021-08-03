@@ -19,12 +19,16 @@ const styles = StyleSheet.create({
     marginBottom: hp(5),
   },
   inputContainer: {
-    marginTop: hp(8),
+    marginTop: hp(7),
     alignSelf: 'center',
+    marginLeft: wp(5),
+    marginRight: wp(5),
   },
   email: {
     width: wp(90),
-    marginBottom: hp(3),
+    marginBottom: hp(0.5),
+    alignSelf: 'center',
+    marginTop: hp(2),
   },
   forgot: {
     textAlign: 'right',
@@ -32,7 +36,7 @@ const styles = StyleSheet.create({
   },
   socialContainer: {
     alignItems: 'center',
-    marginTop: hp(2),
+    marginTop: hp(5),
   },
   image: {
     height: hp(4),
@@ -47,6 +51,7 @@ const styles = StyleSheet.create({
   },
   validatorIcon: {
     marginRight: wp(2),
+    marginLeft: wp(2),
   },
   switch: {
     //width: 0,

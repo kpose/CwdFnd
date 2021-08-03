@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {View, Pressable, Image, KeyboardAvoidingView} from 'react-native';
 import styles from './styles';
 import {Text, TextInput} from 'react-native-paper';
@@ -6,6 +6,23 @@ import {WavyHeader, SmallButton} from '../../components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {WelcomeStackProps} from '../../types/NavigationTypes';
 import {hp, colors, fonts, wp} from '../../utils';
+
+import {Formik} from 'formik';
+import * as yup from 'yup';
+
+const schema = yup.object().shape({
+  email: yup
+    .string()
+    .email('Invalid email address')
+    .required('Enter a valid email'),
+  password: yup
+    .string()
+    .required('Please Enter your password')
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+      'Invalid password',
+    ),
+});
 
 const Signin = ({navigation}: WelcomeStackProps) => {
   return (
@@ -27,27 +44,162 @@ const Signin = ({navigation}: WelcomeStackProps) => {
       </View>
 
       <View style={styles.inputContainer}>
-        <TextInput
-          mode="outlined"
-          label="Email address"
-          autoCorrect={false}
-          textContentType="emailAddress"
-          keyboardType="email-address"
-          style={[styles.email, fonts.caption]}
-        />
-        <TextInput
-          mode="outlined"
-          label="Password"
-          textContentType="password"
-          secureTextEntry={true}
-          style={[styles.email, fonts.caption]}
-        />
-        <Text style={[fonts.caption, styles.forgot]}>Forgot Password?</Text>
-        <View style={{alignItems: 'center'}}>
-          <SmallButton title="Log in" onPress={() => console.log('pressed')} />
-        </View>
+        <Formik
+          validationSchema={schema}
+          validateOnChange={false}
+          //validateOnMount={false}
+          initialValues={{email: '', password: ''}}
+          onSubmit={values => console.log(values)}>
+          {({
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            values,
+            errors,
+            isValid,
+            touched,
+          }) => (
+            <>
+              <TextInput
+                mode="outlined"
+                value={values.email}
+                onChangeText={handleChange('email')}
+                onBlur={handleBlur('email')}
+                label="Email address"
+                autoCorrect={false}
+                autoCompleteType="email"
+                textContentType="emailAddress"
+                keyboardType="email-address"
+                returnKeyType="done"
+                autoCapitalize="none"
+                error={touched.email && errors.email ? true : false}
+                style={[styles.email, fonts.caption]}
+                testID={'emailInputField'}
+              />
+              {errors.email && touched.email && (
+                <Text
+                  style={[
+                    fonts.caption,
+                    {
+                      color: colors.WARNING,
+                      //marginBottom: hp(3),
+                      marginLeft: wp(2),
+                    },
+                  ]}>
+                  {errors.email}
+                </Text>
+              )}
+              <TextInput
+                mode="outlined"
+                value={values.password}
+                onChangeText={handleChange('password')}
+                onBlur={handleBlur('password')}
+                returnKeyType="send"
+                onSubmitEditing={handleSubmit}
+                clearButtonMode="while-editing"
+                label="Password"
+                textContentType="password"
+                error={touched.password && errors.password ? true : false}
+                testID={'passwordInputField'}
+                secureTextEntry={true}
+                style={[styles.email, fonts.caption]}
+              />
+
+              {errors.password && touched.password && (
+                <Text
+                  style={[
+                    fonts.caption,
+                    {
+                      color: colors.WARNING,
+                      //marginBottom: hp(3),
+                      marginLeft: wp(2),
+                    },
+                  ]}>
+                  {errors.password}
+                </Text>
+              )}
+
+              <View style={{marginBottom: hp(3), marginTop: hp(2)}}>
+                {!values.email && (
+                  <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <Icon
+                      name="check-square-o"
+                      size={20}
+                      style={styles.validatorIcon}
+                      color={colors.PRIMARY}
+                    />
+                    <Text style={[fonts.caption, {color: colors.PRIMARY}]}>
+                      should be Valid email address
+                    </Text>
+                  </View>
+                )}
+
+                {values.email && !errors.email ? (
+                  <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <Icon
+                      name="check-square-o"
+                      size={20}
+                      style={styles.validatorIcon}
+                      color={colors.PRIMARY_LIGHT}
+                    />
+                    <Text
+                      style={[fonts.caption, {color: colors.PRIMARY_LIGHT}]}>
+                      Valid email address
+                    </Text>
+                  </View>
+                ) : null}
+
+                {!values.password && (
+                  <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <Icon
+                      name="check-square-o"
+                      size={20}
+                      style={styles.validatorIcon}
+                      color={colors.PRIMARY}
+                    />
+                    <Text style={[fonts.caption, {color: colors.PRIMARY}]}>
+                      Pasword: At least One Uppercase, One Lowercase, One Number
+                      and One Special Case Character
+                    </Text>
+                  </View>
+                )}
+
+                {values.password && !errors.password ? (
+                  <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <Icon
+                      name="check-square-o"
+                      size={20}
+                      style={styles.validatorIcon}
+                      color={colors.PRIMARY_LIGHT}
+                    />
+                    <Text
+                      style={[
+                        fonts.caption,
+                        {color: colors.PRIMARY_LIGHT, alignSelf: 'center'},
+                      ]}>
+                      Pasword: At least One Uppercase, One Lowercase, One Number
+                      and One Special Case Character
+                    </Text>
+                  </View>
+                ) : null}
+              </View>
+
+              <Text style={[fonts.caption, styles.forgot]}>
+                Forgot Password?
+              </Text>
+              <View style={{alignItems: 'center'}}>
+                <SmallButton
+                  title="Log in"
+                  onPress={handleSubmit}
+                  testID="loginButton"
+                  disabled={!isValid}
+                />
+              </View>
+            </>
+          )}
+        </Formik>
       </View>
-      <View style={styles.socialContainer}>
+      {/* <View style={styles.socialContainer}>
         <Text style={[fonts.caption, {marginBottom: hp(0)}]}>OR</Text>
         <Text style={[fonts.caption]}>Login with social media</Text>
         <View style={{flexDirection: 'row', marginTop: hp(1)}}>
@@ -71,7 +223,7 @@ const Signin = ({navigation}: WelcomeStackProps) => {
             />
           </Pressable>
         </View>
-      </View>
+      </View> */}
       <View
         style={{
           justifyContent: 'center',

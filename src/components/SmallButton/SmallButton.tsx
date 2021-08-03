@@ -6,16 +6,20 @@ import {fonts, hp, wp} from '../../utils';
 interface Props {
   title: string;
   onPress: () => void;
+  testID?: string;
+  disabled?: boolean;
 }
 
-const SmallButton = ({title, onPress}: Props) => {
+const SmallButton = ({title, onPress, testID, disabled}: Props) => {
   return (
     <Button
       onPress={onPress}
       style={styles.button}
       mode="contained"
       loading={false}
-      uppercase={false}>
+      uppercase={false}
+      testID={testID}
+      disabled={disabled}>
       <Text style={[fonts.buttonText]}>{title}</Text>
     </Button>
   );
