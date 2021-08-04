@@ -8,6 +8,7 @@ export type WelcomeStackParamList = {
   Signin: undefined;
   Signup: undefined;
   Home: undefined;
+  LinkBank: undefined;
 };
 
 type WelcomeStackRouteProp = NativeStackScreenProps<

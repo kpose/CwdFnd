@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'loan' do
+target 'Floatme' do
   config = use_native_modules!
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
@@ -14,7 +14,7 @@ target 'loan' do
 
   )
 
-  target 'loanTests' do
+  target 'FloatmeTests' do
     inherit! :complete
     # Pods for testing
   end

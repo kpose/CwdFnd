@@ -28,20 +28,18 @@ const schema = yup.object().shape({
     .required('Full name is required'),
 });
 
-interface EmailPasswordFormProps {
-  onSubmit: (data: EmailPasswordFormState) => void;
-  onForgotPasswordPress: () => void;
-}
-
-type EmailPasswordFormState = {
+interface SignupFormProps {
+  name: string;
   email: string;
   password: string;
-};
+}
 
-const Signup = (
-  {navigation}: WelcomeStackProps,
-  {onSubmit, onForgotPasswordPress}: EmailPasswordFormProps,
-) => {
+const Signup = ({navigation}: WelcomeStackProps) => {
+  const onSignUp = (values: SignupFormProps) => {
+    //console.log(values);
+    navigation.navigate('LinkBank');
+  };
+
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
       <WavyHeader
@@ -66,7 +64,7 @@ const Signup = (
           validateOnChange={false}
           //validateOnMount={false}
           initialValues={{email: '', password: '', firstname: ''}}
-          onSubmit={onSubmit}>
+          onSubmit={values => onSignUp(values)}>
           {({
             handleChange,
             handleBlur,
