@@ -1,12 +1,18 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {SafeAreaView, Text, StatusBar} from 'react-native';
 import styles from './styles';
+
+import {FloatmeCard} from '~components';
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <Text style={{color: 'white'}}>Home</Text>
-    </View>
+    <>
+      <StatusBar hidden={false} />
+      <SafeAreaView style={styles.container}>
+        <FloatmeCard />
+        <FloatmeCard />
+      </SafeAreaView>
+    </>
   );
 };
 

@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     borderRadius: wp(5),
     justifyContent: 'center',
     backgroundColor: colors.WHITE,
-    //alignItems: 'center',
     alignSelf: 'center',
   },
   buttonContainer: {
@@ -34,6 +33,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     left: 0,
     right: 0,
+  },
+  skipButton: {
+    position: 'absolute',
+    top: hp(6),
+    right: wp(2),
   },
 });
 

@@ -1,6 +1,7 @@
 import React from 'react';
-import {createNativeStackNavigator} from 'react-native-screens/native-stack';
-import {OnBoarding, Home, Signup, Signin, LinkBank} from '../screens';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {OnBoarding, Signup, Signin, LinkBank} from '../screens';
+import HomeBottomTab from './HomeBottomTab';
 import {WelcomeStackParamList} from '../types/NavigationTypes';
 
 const Stack = createNativeStackNavigator<WelcomeStackParamList>();
@@ -32,8 +33,8 @@ function WelcomeStack() {
         }} */
       />
       <Stack.Screen
-        name="Home"
-        component={Home}
+        name="BottomTabs"
+        component={HomeBottomTab}
         /* options={{
           replaceAnimation: 'push',
           stackPresentation: 'modal',
