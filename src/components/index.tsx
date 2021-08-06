@@ -4,6 +4,7 @@ import Square from './Square/Square';
 import OnBoardingButtons from './OnboardingButtons/OnBoardingButtons';
 import WavyHeader from './WavyHeader/WavyHeader';
 import SmallButton from './SmallButton/SmallButton';
+import BigButton from './BigButton/BigButton';
 import FloatmeCard from './FloatmeCard/FloatmeCard';
 
 export {
@@ -14,4 +15,5 @@ export {
   WavyHeader,
   SmallButton,
   FloatmeCard,
+  BigButton,
 };

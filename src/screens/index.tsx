@@ -6,6 +6,13 @@ import LinkBank from './LinkBank/LinkBank';
 import Search from './Search/Search';
 import Notifications from './Notifications/Notifications';
 import Profile from './Profile/Profile';
+import EnterEmail from './EnterEmail/EnterEmail';
+import EnterNumber from './EnterNumber/EnterNumber';
+import EnterOTP from './EnterOTP/EnterOTP';
+import SetPassword from './SetPassword/SetPassword';
+import SetOptions from './Signup/Signup';
+import SetName from './SetName/SetName';
+import SetCategories from './SetCategories/SetCategories';
 
 export {
   Home,
@@ -16,4 +23,11 @@ export {
   Search,
   Notifications,
   Profile,
+  EnterEmail,
+  EnterNumber,
+  EnterOTP,
+  SetCategories,
+  SetName,
+  SetOptions,
+  SetPassword,
 };

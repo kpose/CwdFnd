@@ -5,9 +5,8 @@ import {fonts, colors} from '~utils';
 import styles from './styles';
 import {BigButton} from '~components';
 import LinearGradient from 'react-native-linear-gradient';
-import {WelcomeStackProps} from '~types/NavigationTypes';
 
-const Signup = ({navigation}: WelcomeStackProps) => {
+const EnterEmail = () => {
   return (
     <LinearGradient
       colors={[colors.PRIMARY, colors.PRIMARY, colors.PRIMARY_LIGHT]}
@@ -21,14 +20,8 @@ const Signup = ({navigation}: WelcomeStackProps) => {
         </View>
 
         <View style={styles.bottomContainer}>
-          <BigButton
-            title="Sign up with mobile number"
-            onPress={() => navigation.navigate('EnterNumber')}
-          />
-          <BigButton
-            title="Sign up using Email"
-            onPress={() => navigation.navigate('EnterEmail')}
-          />
+          <BigButton title="Sign up with mobile number" />
+          <BigButton title="Sign up using Email" />
         </View>
         <View style={styles.iconContainer}>
           <Image
@@ -53,4 +46,4 @@ const Signup = ({navigation}: WelcomeStackProps) => {
   );
 };
 
-export default Signup;
+export default EnterEmail;

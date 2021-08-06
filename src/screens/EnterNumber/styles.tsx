@@ -16,29 +16,14 @@ const styles = StyleSheet.create({
     width: wp(90),
   },
   bottomContainer: {
-    marginTop: hp(45),
+    marginTop: hp(23),
     alignItems: 'center',
   },
-  socialIcon: {
-    height: 40,
-    width: 40,
-    borderRadius: 50,
-  },
-  iconContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginLeft: wp(15),
-    marginRight: wp(15),
-  },
-  bottomText: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: hp(3),
-  },
-  signin: {
-    marginLeft: wp(2),
-    color: colors.SECONDARY,
-    fontWeight: 'bold',
+  textContainer: {
+    marginTop: hp(4),
+    alignSelf: 'center',
+    width: '100%',
+    borderRadius: 10,
   },
 });
 

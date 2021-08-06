@@ -13,7 +13,13 @@ export type WelcomeStackParamList = {
   Signin: undefined;
   Signup: undefined;
   BottomTabs: undefined;
-  LinkBank: undefined;
+  EnterNumber: undefined;
+  EnterEmail: undefined;
+  EnterOTP: undefined;
+  SetPassword: undefined;
+  SetOptions: undefined;
+  SetName: undefined;
+  SetCategories: undefined;
 };
 export type HomeBottomTabParamList = {
   Home: undefined;

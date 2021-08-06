@@ -19,7 +19,7 @@ const OnBoardingButtons = ({scrollX}: any) => {
           {color: colors.PRIMARY, fontWeight: '700'},
         ]}
         color={colors.WHITE}
-        onPress={() => navigation.navigate('Signin')}
+        //onPress={() => navigation.navigate('Signin')}
       />
 
       <Button

@@ -16,29 +16,25 @@ const styles = StyleSheet.create({
     width: wp(90),
   },
   bottomContainer: {
-    marginTop: hp(45),
+    marginTop: hp(16),
     alignItems: 'center',
   },
-  socialIcon: {
-    height: 40,
-    width: 40,
-    borderRadius: 50,
+  textContainer: {
+    marginTop: hp(4),
+    alignSelf: 'center',
+    width: '100%',
+    borderRadius: 10,
   },
-  iconContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginLeft: wp(15),
-    marginRight: wp(15),
-  },
-  bottomText: {
-    flexDirection: 'row',
-    justifyContent: 'center',
+  otpInput: {
+    alignSelf: 'center',
+    width: wp(80),
     marginTop: hp(3),
+    height: hp(10),
   },
-  signin: {
-    marginLeft: wp(2),
-    color: colors.SECONDARY,
-    fontWeight: 'bold',
+  input: {
+    borderRadius: 10,
+    height: hp(7),
+    width: wp(15),
   },
 });
 

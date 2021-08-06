@@ -9,30 +9,29 @@ const {width, height} = Dimensions.get('screen');
 const DATA = [
   {
     key: '3571572',
-    title: 'We are the catalyst of change',
-    description:
-      'One app for all of your giving. If you launch your campaign with zero audience, you are launching to crickets.',
+    title: 'The best of the internet everyday',
+    description: 'Never miss out of a chance to fund and generate new products',
     image: require('../../assets/images/crowdfunding-2.png'),
   },
   {
     key: '3571747',
     title: 'We go the extra mile for you.',
     description:
-      'Something we have done with our campaigns is that we are extremely transparent. Life is not scripted, conversations with our donors should not be either.',
+      'Something we have done with our campaigns is that we are extremely transparent. Life is not scripted, conversations with founders should not be either.',
     image: require('../../assets/images/equity.png'),
   },
   {
     key: '3571680',
-    title: 'Dedicated to finding you the next cool project',
+    title: 'Live demos with the co-founders themselves',
     description:
-      'Most giving is 80% emotion and 20% rational. And the best way to get to someone`s emotion is to tell a story.',
+      'Have a doubt about the product? Don`t worry, we will provide you with a live demo video.',
     image: require('../../assets/images/crowdfunding-4.png'),
   },
   {
     key: '3571603',
-    title: 'There is profound joy in giving',
+    title: 'Fund now and get rewarded later',
     description:
-      'No one has ever become poor by giving. The only thing that matters a damn is the donor experience.',
+      'Even the smallest contribution will be appreciated with a customized token from the company.',
     image: require('../../assets/images/donation.png'),
   },
 ];
@@ -79,13 +78,14 @@ const OnBoarding = () => {
                 <Text
                   style={[
                     fonts.title,
+                    styles.title,
                     {
                       marginBottom: hp(2),
                     },
                   ]}>
                   {item.title}
                 </Text>
-                <Text style={[fonts.caption, {textAlign: 'right'}]}>
+                <Text style={[fonts.caption, {textAlign: 'center'}]}>
                   {item.description}
                 </Text>
               </View>
