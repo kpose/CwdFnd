@@ -23,29 +23,70 @@ function WelcomeStack() {
     <Stack.Navigator
       screenOptions={{
         gestureEnabled: false,
-        headerShown: false,
       }}>
-      <Stack.Screen name="OnBoarding" component={OnBoarding} />
+      <Stack.Screen
+        name="OnBoarding"
+        component={OnBoarding}
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         name="Signin"
         component={Signin}
-        /* options={{
-          replaceAnimation: 'push',
-          stackPresentation: 'modal',
-          stackAnimation: 'flip',
-        }} */
+        options={{headerShown: false}}
       />
-      <Stack.Screen name="Signup" component={Signup} />
-      <Stack.Screen name="EnterNumber" component={EnterNumber} />
-      <Stack.Screen name="EnterEmail" component={EnterEmail} />
-      <Stack.Screen name="EnterOTP" component={EnterOTP} />
-      <Stack.Screen name="SetPassword" component={SetPassword} />
-      <Stack.Screen name="SetOptions" component={SetOptions} />
-      <Stack.Screen name="SetName" component={SetName} />
-      <Stack.Screen name="SetCategories" component={SetCategories} />
-      <Stack.Screen name="BottomTabs" component={HomeBottomTab} />
+      <Stack.Screen
+        name="Signup"
+        component={Signup}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="EnterNumber"
+        component={EnterNumber}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="EnterEmail"
+        component={EnterEmail}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="EnterOTP"
+        component={EnterOTP}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SetPassword"
+        component={SetPassword}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SetOptions"
+        component={SetOptions}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SetName"
+        component={SetName}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SetCategories"
+        component={SetCategories}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="BottomTabs"
+        component={HomeBottomTab}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
 }
 
 export default WelcomeStack;
+
+/* options={{
+          replaceAnimation: 'push',
+          stackPresentation: 'modal',
+          stackAnimation: 'flip',
+        }} */

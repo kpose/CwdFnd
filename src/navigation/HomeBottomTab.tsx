@@ -1,15 +1,15 @@
 import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {HomeBottomTabParamList} from '../types/NavigationTypes';
-import {Home, Search, Notifications, Profile} from '~screens';
+import {Home, Search, Notifications, Profile, Project} from '~screens';
 import {colors} from '~utils';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Tab = createMaterialBottomTabNavigator<HomeBottomTabParamList>();
 
 function HomeBottomTab() {
   return (
-    <Tab.Navigator labeled={false} activeColor={colors.PRIMARY}>
+    <Tab.Navigator labeled={false} activeColor={colors.SECONDARY}>
       <Tab.Screen
         name="Home"
         component={Home}
@@ -18,11 +18,21 @@ function HomeBottomTab() {
         }}
       />
       <Tab.Screen
-        name="Search"
+        name="Explore"
         component={Search}
         options={{
           tabBarIcon: ({color}) => (
-            <Icon name="search1" color={color} size={26} />
+            <Icon name="compass" color={color} size={26} />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Project"
+        component={Project}
+        options={{
+          tabBarIcon: ({color}) => (
+            <Icon name="plus-square" color={color} size={26} />
           ),
         }}
       />
@@ -30,9 +40,7 @@ function HomeBottomTab() {
         name="Notifications"
         component={Notifications}
         options={{
-          tabBarIcon: ({color}) => (
-            <Icon name="bells" color={color} size={26} />
-          ),
+          tabBarIcon: ({color}) => <Icon name="bell" color={color} size={26} />,
         }}
       />
       <Tab.Screen

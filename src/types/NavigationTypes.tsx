@@ -23,7 +23,8 @@ export type WelcomeStackParamList = {
 };
 export type HomeBottomTabParamList = {
   Home: undefined;
-  Search: undefined;
+  Explore: undefined;
+  Project: undefined;
   Notifications: undefined;
   Profile: undefined;
 };

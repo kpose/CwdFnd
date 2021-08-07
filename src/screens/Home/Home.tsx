@@ -1,6 +1,7 @@
 import React from 'react';
-import {SafeAreaView, Text, StatusBar} from 'react-native';
+import {SafeAreaView, Text, StatusBar, View} from 'react-native';
 import styles from './styles';
+import {Header} from '~components';
 
 import {FloatmeCard} from '~components';
 
@@ -8,10 +9,9 @@ const Home = () => {
   return (
     <>
       <StatusBar hidden={false} />
-      <SafeAreaView style={styles.container}>
-        <FloatmeCard />
-        <FloatmeCard />
-      </SafeAreaView>
+      <View style={styles.container}>
+        <Header leftIcon="search" rightIcon="inbox" centerText="FloatMe" />
+      </View>
     </>
   );
 };
