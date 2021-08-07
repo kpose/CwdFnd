@@ -21,12 +21,10 @@ const styles = StyleSheet.create({
   },
   fullname: {
     width: wp(90),
-    height: hp(8),
     marginBottom: hp(0.5),
     alignSelf: 'center',
     marginTop: hp(2),
-    textAlign: 'center',
-    //backgroundColor: colors.WHITE,
+    backgroundColor: colors.WHITE,
   },
 });
 

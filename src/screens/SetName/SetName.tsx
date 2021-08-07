@@ -20,7 +20,7 @@ const schema = yup.object().shape({
 const SetName = ({navigation}: WelcomeStackProps) => {
   const onSubmit = (values: {}) => {
     console.log(values);
-    navigation.navigate('SetCategories');
+    navigation.navigate('SetOptions');
   };
   return (
     <LinearGradient
@@ -64,6 +64,9 @@ const SetName = ({navigation}: WelcomeStackProps) => {
                 value={values.fullname}
                 onChangeText={handleChange('fullname')}
                 onBlur={handleBlur('fullname')}
+                placeholder="Fullname"
+                placeholderTextColor={colors.BLACK}
+                theme={{colors: {text: colors.BLACK}}}
                 autoCorrect={false}
                 autoCompleteType="name"
                 textContentType="name"

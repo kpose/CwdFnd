@@ -9,7 +9,7 @@ export const fonts = StyleSheet.create({
   },
   title: {
     fontSize: scale(23),
-    fontWeight: '500',
+    fontWeight: 'bold',
     letterSpacing: 0.41,
   },
   body: {

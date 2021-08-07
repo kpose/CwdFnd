@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {hp, wp, colors, fonts} from '../../utils';
+import {hp, wp, colors} from '../../utils';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,28 +16,20 @@ const styles = StyleSheet.create({
     width: wp(90),
   },
   bottomContainer: {
-    marginTop: hp(45),
+    marginTop: hp(26),
     alignItems: 'center',
   },
-  socialIcon: {
-    height: 40,
-    width: 40,
-    borderRadius: 50,
-  },
-  iconContainer: {
+  optionsContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginLeft: wp(15),
-    marginRight: wp(15),
+    marginTop: hp(4),
+    alignItems: 'center',
+    borderRadius: wp(2),
+    height: hp(10),
+    width: '100%',
+    backgroundColor: colors.PRIMARY_LIGHT,
   },
-  bottomText: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: hp(3),
-  },
-  signin: {
-    marginLeft: wp(2),
-    color: colors.SECONDARY,
+  title: {
+    marginBottom: hp(1),
     fontWeight: 'bold',
   },
 });

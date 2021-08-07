@@ -10,7 +10,7 @@ import EnterEmail from './EnterEmail/EnterEmail';
 import EnterNumber from './EnterNumber/EnterNumber';
 import EnterOTP from './EnterOTP/EnterOTP';
 import SetPassword from './SetPassword/SetPassword';
-import SetOptions from './Signup/Signup';
+import SetOptions from './SetOptions/SetOptions';
 import SetName from './SetName/SetName';
 import SetCategories from './SetCategories/SetCategories';
 

@@ -14,31 +14,19 @@ const styles = StyleSheet.create({
     marginTop: hp(2),
     color: colors.LIGHT_GRAY,
     width: wp(90),
+    fontWeight: 'bold',
   },
   bottomContainer: {
-    marginTop: hp(45),
+    marginTop: hp(22),
     alignItems: 'center',
   },
-  socialIcon: {
-    height: 40,
-    width: 40,
-    borderRadius: 50,
-  },
-  iconContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginLeft: wp(15),
-    marginRight: wp(15),
-  },
-  bottomText: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: hp(3),
-  },
-  signin: {
-    marginLeft: wp(2),
-    color: colors.SECONDARY,
-    fontWeight: 'bold',
+
+  email: {
+    width: wp(90),
+    marginBottom: hp(0.5),
+    alignSelf: 'center',
+    marginTop: hp(2),
+    backgroundColor: colors.WHITE,
   },
 });
 

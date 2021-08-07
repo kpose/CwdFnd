@@ -6,6 +6,7 @@ import WavyHeader from './WavyHeader/WavyHeader';
 import SmallButton from './SmallButton/SmallButton';
 import BigButton from './BigButton/BigButton';
 import FloatmeCard from './FloatmeCard/FloatmeCard';
+import CategoryButton from './CategoryButton/CategoryButton';
 
 export {
   Indicator,
@@ -16,4 +17,5 @@ export {
   SmallButton,
   FloatmeCard,
   BigButton,
+  CategoryButton,
 };
