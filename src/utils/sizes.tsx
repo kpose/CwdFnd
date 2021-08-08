@@ -8,7 +8,7 @@ export const fonts = StyleSheet.create({
     letterSpacing: 0.41,
   },
   title: {
-    fontSize: scale(23),
+    fontSize: scale(20),
     fontWeight: 'bold',
     letterSpacing: 0.41,
   },
@@ -18,12 +18,12 @@ export const fonts = StyleSheet.create({
     letterSpacing: -0.41,
   },
   subheading: {
-    fontSize: scale(17),
+    fontSize: scale(14),
     fontWeight: '500',
     letterSpacing: -0.24,
   },
   caption: {
-    fontSize: scale(15),
+    fontSize: scale(11),
     fontWeight: 'normal',
     letterSpacing: -0.08,
   },

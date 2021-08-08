@@ -10,6 +10,8 @@ import CategoryButton from './CategoryButton/CategoryButton';
 import Header from './Header/Header';
 import AddLocation from './AddLocation/AddLocation';
 import CarouselItem from './CarouselItem/CarouselItem';
+import ProjectCard from './ProjectCard/ProjectCard';
+import AroundYou from './AroundYou/AroundYou';
 
 export {
   Indicator,
@@ -24,4 +26,6 @@ export {
   Header,
   AddLocation,
   CarouselItem,
+  ProjectCard,
+  AroundYou,
 };
