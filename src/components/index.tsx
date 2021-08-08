@@ -8,6 +8,8 @@ import BigButton from './BigButton/BigButton';
 import FloatmeCard from './FloatmeCard/FloatmeCard';
 import CategoryButton from './CategoryButton/CategoryButton';
 import Header from './Header/Header';
+import AddLocation from './AddLocation/AddLocation';
+import CarouselItem from './CarouselItem/CarouselItem';
 
 export {
   Indicator,
@@ -20,4 +22,6 @@ export {
   BigButton,
   CategoryButton,
   Header,
+  AddLocation,
+  CarouselItem,
 };

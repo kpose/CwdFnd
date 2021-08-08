@@ -15,7 +15,7 @@ const EnterNumber = ({navigation}: WelcomeStackProps) => {
   const [formattedValue, setFormattedValue] = useState('');
 
   const onButtonPress = () => {
-    const checkValid = phoneInput.current?.isValidNumber(value);
+    //const checkValid = phoneInput.current?.isValidNumber(value);
     navigation.navigate('EnterOTP');
   };
   return (
@@ -45,7 +45,7 @@ const EnterNumber = ({navigation}: WelcomeStackProps) => {
 
         {/*  */}
 
-        <PhoneInput
+        {/* <PhoneInput
           ref={phoneInput}
           defaultValue={value}
           defaultCode="NG"
@@ -57,7 +57,7 @@ const EnterNumber = ({navigation}: WelcomeStackProps) => {
           withDarkTheme
           withShadow
           autoFocus
-        />
+        /> */}
 
         {/*  */}
 

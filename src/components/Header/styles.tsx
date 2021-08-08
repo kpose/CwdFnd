@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     height: hp(11),
     width: '100%',
     justifyContent: 'center',
+    marginBottom: hp(1),
   },
   header: {
     flexDirection: 'row',
