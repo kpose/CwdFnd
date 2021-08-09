@@ -3,6 +3,8 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+
+/* import {scale as wp, verticalScale as hp} from 'react-native-size-matters'; */
 import * as colors from './colors';
 import {CombinedDarkTheme, CombinedLightTheme} from './theme';
 

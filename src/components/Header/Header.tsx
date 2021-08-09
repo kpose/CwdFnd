@@ -40,9 +40,7 @@ const Header = ({
 
         <View>
           {centerText && (
-            <Animated.Text style={[fonts.modalTitle]}>
-              {centerText}
-            </Animated.Text>
+            <Animated.Text style={[fonts.title]}>{centerText}</Animated.Text>
           )}
           {centerImage && <Image source={{uri: centerImage}} />}
         </View>

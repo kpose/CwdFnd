@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   },
   title: {
     marginBottom: hp(1),
-    fontWeight: 'normal',
+    //fontWeight: 'normal',
   },
   seeMore: {
     color: colors.PRIMARY,

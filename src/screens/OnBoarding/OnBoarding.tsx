@@ -85,7 +85,7 @@ const OnBoarding = () => {
                   ]}>
                   {item.title}
                 </Text>
-                <Text style={[fonts.caption, {textAlign: 'center'}]}>
+                <Text style={[fonts.subheading, {textAlign: 'center'}]}>
                   {item.description}
                 </Text>
               </View>

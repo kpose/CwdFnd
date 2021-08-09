@@ -27,7 +27,7 @@ const BigButton = ({
       uppercase={false}
       testID={testID}
       disabled={disabled}>
-      <Text style={[fonts.buttonText]}>{title}</Text>
+      <Text style={[fonts.bigButtonText]}>{title}</Text>
     </Button>
   );
 };

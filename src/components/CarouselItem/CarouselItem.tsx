@@ -22,7 +22,7 @@ const CarouselItem = () => {
             imageStyle={{borderRadius: wp(3)}}></ImageBackground>
 
           <View style={{marginLeft: wp(2), marginRight: wp(2)}}>
-            <Text style={[fonts.subheading, styles.title]}>{item.title}</Text>
+            <Text style={[fonts.body, styles.title]}>{item.title}</Text>
             <Divider style={styles.divider} />
             <View style={styles.bottomContainer}>
               <Text style={fonts.caption}>2000 of 50000</Text>

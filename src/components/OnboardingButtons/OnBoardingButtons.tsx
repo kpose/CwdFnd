@@ -14,10 +14,7 @@ const OnBoardingButtons = ({scrollX}: any) => {
         uppercase={false}
         style={styles.button}
         children="Log in"
-        labelStyle={[
-          fonts.segmentedButtonText,
-          {color: colors.PRIMARY, fontWeight: '700'},
-        ]}
+        labelStyle={[fonts.smallButtonText, {color: colors.PRIMARY}]}
         color={colors.WHITE}
         //onPress={() => navigation.navigate('Signin')}
       />
@@ -27,10 +24,7 @@ const OnBoardingButtons = ({scrollX}: any) => {
         uppercase={false}
         children="Sign up"
         style={styles.button}
-        labelStyle={[
-          fonts.segmentedButtonText,
-          {color: colors.PRIMARY, fontWeight: '700'},
-        ]}
+        labelStyle={[fonts.smallButtonText, {color: colors.PRIMARY}]}
         color={colors.WHITE}
         onPress={() => navigation.navigate('Signup')}
       />

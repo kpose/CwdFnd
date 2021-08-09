@@ -10,13 +10,15 @@ const HomeProjectsContent = () => {
     <ScrollView>
       <AddLocation />
       <View style={styles.featuredContainer}>
-        <Text style={[fonts.title, styles.title]}>Featured Projects</Text>
+        <Text style={[fonts.itemTitle, styles.title]}>Featured Projects</Text>
         <CarouselItem />
       </View>
 
       <View style={styles.featuredContainer}>
         <View style={styles.rowHeader}>
-          <Text style={[fonts.title, styles.title]}>Projects around you</Text>
+          <Text style={[fonts.itemTitle, styles.title]}>
+            Projects around you
+          </Text>
           <Text style={[styles.seeMore, fonts.caption]}>See more</Text>
         </View>
         <AroundYou />

@@ -7,13 +7,13 @@ import {fonts, wp} from '~utils';
 const AddLocation = () => {
   return (
     <View style={styles.container}>
-      <Text style={[fonts.modalTitle, {alignSelf: 'center'}]}>
+      <Text style={[fonts.title, {alignSelf: 'center'}]}>
         Fund projects you care about
       </Text>
       <Pressable style={styles.buttonContainer}>
-        <Text style={[fonts.caption]}>Use your current location</Text>
+        <Text style={[fonts.smallButtonText]}>Use your current location</Text>
       </Pressable>
-      <Text style={[fonts.caption]}>Or enter your location manually</Text>
+      <Text style={[fonts.body]}>Or enter your location manually</Text>
     </View>
   );
 };

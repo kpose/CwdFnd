@@ -13,7 +13,7 @@ const ProjectCard = ({title, image}: Props) => {
   return (
     <Surface style={styles.container}>
       <Image source={image} style={styles.image} />
-      <Text numberOfLines={1} style={[fonts.subheading, styles.title]}>
+      <Text numberOfLines={1} style={[fonts.body, styles.title]}>
         {title}
       </Text>
       <Divider style={styles.divider} />

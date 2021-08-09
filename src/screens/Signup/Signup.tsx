@@ -14,8 +14,8 @@ const Signup = ({navigation}: WelcomeStackProps) => {
       style={{flex: 1}}>
       <SafeAreaView style={styles.container}>
         <View style={styles.titleContainer}>
-          <Text style={[fonts.title]}>Sign up to get started</Text>
-          <Text style={[fonts.caption, styles.description]}>
+          <Text style={[fonts.headerTitle]}>Sign up to get started</Text>
+          <Text style={[fonts.subheading, styles.description]}>
             Sign up to access a wide range of products and experiences
           </Text>
         </View>
@@ -45,8 +45,8 @@ const Signup = ({navigation}: WelcomeStackProps) => {
           />
         </View>
         <View style={styles.bottomText}>
-          <Text style={[fonts.caption]}>Already a member?</Text>
-          <Text style={[fonts.caption, styles.signin]}>Sign in</Text>
+          <Text style={[fonts.body]}>Already a member?</Text>
+          <Text style={[fonts.body, styles.signin]}>Sign in</Text>
         </View>
       </SafeAreaView>
     </LinearGradient>
