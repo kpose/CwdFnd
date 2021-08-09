@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {hp, wp} from '~utils';
+const HEADER_MAX_HEIGHT = hp(12);
 
 const styles = StyleSheet.create({
   headerContainer: {

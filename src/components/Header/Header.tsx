@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, SafeAreaView, Image} from 'react-native';
+import {View, SafeAreaView, Image, Animated} from 'react-native';
 import {Text, Surface} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {colors, fonts, regularIconSize} from '~utils';
@@ -26,7 +26,9 @@ const Header = ({
     <Surface style={styles.headerContainer}>
       <SafeAreaView style={styles.header}>
         <View>
-          {leftText && <Text style={[fonts.caption]}>{leftText}</Text>}
+          {leftText && (
+            <Animated.Text style={[fonts.caption]}>{leftText}</Animated.Text>
+          )}
           {leftIcon && (
             <Icon
               name={leftIcon}
@@ -37,12 +39,18 @@ const Header = ({
         </View>
 
         <View>
-          {centerText && <Text style={[fonts.modalTitle]}>{centerText}</Text>}
+          {centerText && (
+            <Animated.Text style={[fonts.modalTitle]}>
+              {centerText}
+            </Animated.Text>
+          )}
           {centerImage && <Image source={{uri: centerImage}} />}
         </View>
 
         <View>
-          {rightText && <Text style={[fonts.caption]}>{rightText}</Text>}
+          {rightText && (
+            <Animated.Text style={[fonts.caption]}>{rightText}</Animated.Text>
+          )}
           {rightIcon && (
             <Icon
               name={rightIcon}

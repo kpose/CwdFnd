@@ -6,11 +6,11 @@ const styles = StyleSheet.create({
     height: hp(24),
     width: wp(43),
     margin: wp(2),
-    borderRadius: wp(3),
+    borderRadius: wp(2),
   },
   image: {
     width: '100%',
-    borderRadius: wp(3),
+    borderRadius: wp(2),
     height: hp(15),
     resizeMode: 'cover',
   },

@@ -14,6 +14,7 @@ import SetOptions from './SetOptions/SetOptions';
 import SetName from './SetName/SetName';
 import SetCategories from './SetCategories/SetCategories';
 import Project from './Project/Project';
+import HomeProjectsContent from './HomeProjectsContent/HomeProjectsContent';
 
 export {
   Home,
@@ -32,4 +33,5 @@ export {
   SetOptions,
   SetPassword,
   Project,
+  HomeProjectsContent,
 };
