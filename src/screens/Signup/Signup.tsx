@@ -23,7 +23,7 @@ const Signup = ({navigation}: WelcomeStackProps) => {
         <View style={styles.bottomContainer}>
           <BigButton
             title="Sign up with mobile number"
-            onPress={() => navigation.navigate('BottomTabs')}
+            onPress={() => navigation.navigate('HomeStack')}
           />
           <BigButton
             title="Sign up using Email"

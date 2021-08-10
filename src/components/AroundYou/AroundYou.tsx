@@ -7,7 +7,12 @@ const AroundYou = () => {
   return (
     <View style={styles.container}>
       {data.map(item => (
-        <ProjectCard image={item.image} title={item.title} key={item.id} />
+        <ProjectCard
+          image={item.image}
+          title={item.title}
+          key={item.id}
+          onPress={() => console.log('kkkkk')}
+        />
       ))}
     </View>
   );

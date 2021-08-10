@@ -15,6 +15,7 @@ import SetName from './SetName/SetName';
 import SetCategories from './SetCategories/SetCategories';
 import Project from './Project/Project';
 import HomeProjectsContent from './HomeProjectsContent/HomeProjectsContent';
+import ProjectDetails from './ProjectDetails/ProjectDetails';
 
 export {
   Home,
@@ -34,4 +35,5 @@ export {
   SetPassword,
   Project,
   HomeProjectsContent,
+  ProjectDetails,
 };

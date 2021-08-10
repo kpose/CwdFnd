@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image} from 'react-native';
+import {View, Image, Pressable} from 'react-native';
 import {Text, Divider, Surface} from 'react-native-paper';
 import {fonts, hp} from '~utils';
 import styles from './styles';
@@ -7,18 +7,22 @@ import styles from './styles';
 interface Props {
   title: string;
   image: string;
+  onPress: () => void;
 }
 
-const ProjectCard = ({title, image}: Props) => {
+const ProjectCard = ({title, image, onPress}: Props) => {
+  console.log(image);
   return (
-    <Surface style={styles.container}>
-      <Image source={image} style={styles.image} />
-      <Text numberOfLines={1} style={[fonts.body, styles.title]}>
-        {title}
-      </Text>
-      <Divider style={styles.divider} />
-      <Text style={[fonts.caption, {marginBottom: hp(1)}]}>500 of 20000</Text>
-    </Surface>
+    <Pressable onPress={onPress}>
+      <Surface style={styles.container}>
+        <Image source={image} style={styles.image} />
+        <Text numberOfLines={1} style={[fonts.body, styles.title]}>
+          {title}
+        </Text>
+        <Divider style={styles.divider} />
+        <Text style={[fonts.caption, {marginBottom: hp(1)}]}>500 of 20000</Text>
+      </Surface>
+    </Pressable>
   );
 };
 

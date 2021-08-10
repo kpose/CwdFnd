@@ -5,16 +5,18 @@ import Carousel from 'react-native-snap-carousel';
 import {scrollInterpolator, animatedStyles} from './CarouselAnimation';
 import data from '~assets/data/data';
 import {fonts, hp, wp, colors} from '~utils';
+import {useNavigation} from '@react-navigation/native';
 
 const SLIDER_WIDTH = wp(100);
 const ITEM_WIDTH = wp(90);
 
 const CarouselItem = () => {
   const [index, setIndex] = useState(0);
+  const navigation = useNavigation();
 
   const renderItem = ({item}: any) => {
     return (
-      <Pressable>
+      <Pressable onPress={() => navigation.navigate('ProjectDetails', {item})}>
         <View style={styles.itemContainer}>
           <ImageBackground
             source={item.image}

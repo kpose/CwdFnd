@@ -13,7 +13,7 @@ import {
   SetName,
   SetCategories,
 } from '../screens';
-import HomeBottomTab from './HomeBottomTab';
+import HomeStack from './HomeStack';
 import {WelcomeStackParamList} from '../types/NavigationTypes';
 
 const Stack = createNativeStackNavigator<WelcomeStackParamList>();
@@ -75,8 +75,8 @@ function WelcomeStack() {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="BottomTabs"
-        component={HomeBottomTab}
+        name="HomeStack"
+        component={HomeStack}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

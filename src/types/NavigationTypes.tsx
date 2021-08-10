@@ -2,6 +2,7 @@ import {
   NativeStackNavigationProp,
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
+import {RouteProp} from '@react-navigation/native';
 import {
   MaterialBottomTabNavigationProp,
   MaterialBottomTabScreenProps,
@@ -12,7 +13,7 @@ export type WelcomeStackParamList = {
   OnBoarding: undefined;
   Signin: undefined;
   Signup: undefined;
-  BottomTabs: undefined;
+  HomeStack: undefined;
   EnterNumber: undefined;
   EnterEmail: undefined;
   EnterOTP: undefined;
@@ -29,15 +30,19 @@ export type HomeBottomTabParamList = {
   Profile: undefined;
 };
 
+export type HomeStackParamList = {
+  BottomTabs: undefined;
+  ProjectDetails: {item: {}};
+};
+
 /* Navigation params */
-type WelcomeStackRouteProp = NativeStackScreenProps<
-  WelcomeStackParamList,
-  'OnBoarding'
->;
+type WelcomeStackRouteProp = RouteProp<WelcomeStackParamList, 'OnBoarding'>;
+
 type HomeBottomTabRouteProp = MaterialBottomTabScreenProps<
   HomeBottomTabParamList,
   'Home'
 >;
+type HomeStackRouteProp = RouteProp<HomeStackParamList, 'BottomTabs'>;
 
 /* Route params */
 type WelcomeStackNavigationProp = NativeStackNavigationProp<
@@ -47,6 +52,10 @@ type WelcomeStackNavigationProp = NativeStackNavigationProp<
 type HomeBottomTabNavigationProp = MaterialBottomTabNavigationProp<
   HomeBottomTabParamList,
   'Home'
+>;
+type HomeStackNavigationProp = NativeStackNavigationProp<
+  HomeStackParamList,
+  'BottomTabs'
 >;
 
 /* Props */
@@ -58,4 +67,9 @@ export type WelcomeStackProps = {
 export type HomeBottomTabProps = {
   navigation: HomeBottomTabNavigationProp;
   route: HomeBottomTabRouteProp;
+};
+
+export type HomeStackProps = {
+  navigation: HomeStackNavigationProp;
+  route: HomeStackRouteProp;
 };

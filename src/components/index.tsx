@@ -12,6 +12,7 @@ import AddLocation from './AddLocation/AddLocation';
 import CarouselItem from './CarouselItem/CarouselItem';
 import ProjectCard from './ProjectCard/ProjectCard';
 import AroundYou from './AroundYou/AroundYou';
+import SupportProjectContainer from './SupportProjectContainer/SupportProjectContainer';
 
 export {
   Indicator,
@@ -28,4 +29,5 @@ export {
   CarouselItem,
   ProjectCard,
   AroundYou,
+  SupportProjectContainer,
 };
