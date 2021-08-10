@@ -1,7 +1,14 @@
 import React from 'react';
 import {View, Pressable, StyleSheet} from 'react-native';
 import {Text, Surface} from 'react-native-paper';
-import {colors, hp, navigationIconSize, regularIconSize, wp} from '~utils';
+import {
+  colors,
+  hp,
+  navigationIconSize,
+  regularIconSize,
+  wp,
+  fonts,
+} from '~utils';
 import Icon from 'react-native-vector-icons/Feather';
 
 const SupportProjectContainer = () => {
@@ -12,7 +19,7 @@ const SupportProjectContainer = () => {
       </Pressable>
 
       <Pressable style={styles.support}>
-        <Text>Support this project</Text>
+        <Text style={[fonts.bigButtonText]}>Support this project</Text>
       </Pressable>
     </Surface>
   );
@@ -23,7 +30,7 @@ export default SupportProjectContainer;
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    bottom: 0,
+    bottom: hp(0.3),
     height: hp(10),
     left: 0,
     right: 0,
