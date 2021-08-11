@@ -30,7 +30,7 @@ const BackgroundImage = ({item, navigation}: Props) => {
       <ImageBackground
         source={require('../../assets/images/2.jpg')}
         style={styles.image}
-        imageStyle={{borderRadius: wp(10)}}>
+        imageStyle={styles.imageStyle}>
         <SafeAreaView style={styles.banner}>
           <Pressable style={styles.navIcon} onPress={() => navigation.goBack()}>
             <Icon

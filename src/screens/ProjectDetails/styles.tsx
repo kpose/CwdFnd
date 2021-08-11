@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
     width: '100%',
     resizeMode: 'cover',
   },
+  imageStyle: {
+    borderBottomLeftRadius: wp(10),
+    borderBottomRightRadius: wp(10),
+  },
   titleContainer: {
     position: 'absolute',
     bottom: hp(3),
@@ -33,10 +37,10 @@ const styles = StyleSheet.create({
   },
   navIcon: {
     backgroundColor: colors.LIGHT_GRAY,
-    height: hp(4.5),
+    height: wp(8),
     alignItems: 'center',
     justifyContent: 'center',
-    width: wp(10),
+    width: wp(8),
     borderRadius: 50,
   },
   avatar: {

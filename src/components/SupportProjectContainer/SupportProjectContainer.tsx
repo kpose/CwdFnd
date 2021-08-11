@@ -15,7 +15,7 @@ const SupportProjectContainer = () => {
   return (
     <Surface style={styles.container}>
       <Pressable style={styles.shareContainer}>
-        <Icon name="upload" size={navigationIconSize} color={colors.PRIMARY} />
+        <Icon name="upload" size={regularIconSize} color={colors.PRIMARY} />
       </Pressable>
 
       <Pressable style={styles.support}>
@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
     right: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    borderRadius: wp(10),
+    borderTopLeftRadius: wp(7),
+    borderTopRightRadius: wp(7),
     alignItems: 'center',
     paddingLeft: wp(4),
     paddingRight: wp(4),

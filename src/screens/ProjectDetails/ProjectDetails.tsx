@@ -6,6 +6,7 @@ import {colors, fonts, hp, wp} from '~utils';
 import BackgroundImage from './BackgroundImage';
 import SupportContainer from './SupportContainer';
 import {SupportProjectContainer} from '~components';
+import ProjectDetailsTab from '~navigation/ProjectDetailsTab';
 
 const ProjectDetails = ({route, navigation}: HomeStackProps) => {
   const {item} = route.params;
@@ -14,6 +15,7 @@ const ProjectDetails = ({route, navigation}: HomeStackProps) => {
       <BackgroundImage item={item} navigation={navigation} />
       <SupportContainer item={item} />
       <SupportProjectContainer />
+      {/* <ProjectDetailsTab /> */}
     </View>
   );
 };

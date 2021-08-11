@@ -16,6 +16,10 @@ import SetCategories from './SetCategories/SetCategories';
 import Project from './Project/Project';
 import HomeProjectsContent from './HomeProjectsContent/HomeProjectsContent';
 import ProjectDetails from './ProjectDetails/ProjectDetails';
+import Risks from './Risks/Risks';
+import Comments from './Comments/Comments';
+import Updates from './Updates/Updates';
+import Campaign from './Campaign/Campaign';
 
 export {
   Home,
@@ -36,4 +40,8 @@ export {
   Project,
   HomeProjectsContent,
   ProjectDetails,
+  Risks,
+  Campaign,
+  Comments,
+  Updates,
 };
