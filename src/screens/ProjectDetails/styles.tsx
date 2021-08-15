@@ -1,62 +1,91 @@
-import {StyleSheet} from 'react-native';
-import {colors, hp, wp} from '~utils';
+import {StyleSheet, Dimensions, Platform} from 'react-native';
+import {hp} from '~utils';
+const G_WIN_WIDTH = Dimensions.get('window').width;
+const HEAD_HEIGHT = hp(73);
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    //backgroundColor: '#fff',
   },
-  image: {
-    height: hp(60),
-    width: '100%',
-    resizeMode: 'cover',
+  tabbarStyle: {
+    height: 60,
+    borderTopLeftRadius: 14,
+    borderTopRightRadius: 14,
+    backgroundColor: 'red',
   },
-  imageStyle: {
-    borderBottomLeftRadius: wp(10),
-    borderBottomRightRadius: wp(10),
-  },
-  titleContainer: {
-    position: 'absolute',
-    bottom: hp(3),
-    marginLeft: wp(4),
-    marginRight: wp(4),
-  },
-  categoryContainer: {
-    flexDirection: 'row',
-    alignSelf: 'flex-start',
-    backgroundColor: colors.LIGHT_GRAY,
-    padding: wp(2),
-    borderRadius: wp(3),
-    marginBottom: hp(1),
-  },
-  banner: {
-    flexDirection: 'row',
-    marginTop: hp(7),
-    marginLeft: wp(4),
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  navIcon: {
-    backgroundColor: colors.LIGHT_GRAY,
-    height: wp(8),
-    alignItems: 'center',
+  tabbarBtn: {
     justifyContent: 'center',
-    width: wp(8),
-    borderRadius: 50,
+    alignItems: 'center',
   },
-  avatar: {
-    height: wp(6),
-    width: wp(6),
-    resizeMode: 'cover',
-    borderRadius: 50,
-    marginRight: wp(2),
+  tabbarImage: {
+    width: 15,
+    height: 15,
   },
-  locationContainer: {
+  tabviewLayout: {
+    width: G_WIN_WIDTH,
+  },
+  headerStyle: {
+    //backgroundColor: '#fff',
+    width: '100%',
+    height: HEAD_HEIGHT,
+  },
+  titleStyle: {
+    color: '#333',
+    fontSize: 15,
+  },
+  detailStyle: {
+    color: '#888',
+    fontSize: 12,
+  },
+  sectionTitle: {
+    color: '#4D4D4D',
+    fontSize: 15,
+  },
+  flatItem: {
+    paddingLeft: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: '#EAEAEA',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    marginLeft: wp(4),
-    marginRight: wp(4),
-    marginTop: hp(1),
+  },
+  sectionItem: {
+    height: 50,
+    justifyContent: 'center',
+    paddingLeft: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: '#EAEAEA',
+  },
+  cell: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  slide: {
+    flex: 1,
+  },
+  carouselImage: {
+    width: '100%',
+    height: 200,
+  },
+  headerTitle: {
+    fontSize: 18,
+  },
+  addHeaderTitle: {
+    color: 'red',
+    fontSize: 18,
+  },
+  subTitle: {
+    color: '#848484',
+    fontSize: 15,
+    marginTop: 20,
+    paddingHorizontal: 30,
+    textAlign: 'center',
+    ...Platform.select({
+      android: {
+        fontFamily: '',
+      },
+    }),
   },
 });
 

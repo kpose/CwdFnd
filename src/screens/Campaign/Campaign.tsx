@@ -1,12 +1,26 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {forwardRef, memo, useCallback} from 'react';
+import {ScrollView, ScrollViewProps, StyleSheet, FlatList} from 'react-native';
+import {Text} from 'react-native-paper';
+import Animated from 'react-native-reanimated';
 
-const Campaign = () => {
+export const AnimatedScrollView = Animated.createAnimatedComponent(ScrollView);
+
+const Campaign = forwardRef<ScrollView>((props, ref) => {
   return (
-    <View>
+    <AnimatedScrollView
+      ref={ref}
+      style={styles.container}
+      {...props}
+      showsVerticalScrollIndicator={false}>
       <Text>Campaign</Text>
-    </View>
+    </AnimatedScrollView>
   );
-};
+});
 
-export default Campaign;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+
+export default memo(Campaign);

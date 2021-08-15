@@ -1,12 +1,26 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {forwardRef, memo, useCallback} from 'react';
+import {ScrollView, ScrollViewProps, StyleSheet} from 'react-native';
+import {Text} from 'react-native-paper';
+import Animated from 'react-native-reanimated';
 
-const Comments = () => {
+export const AnimatedScrollView = Animated.createAnimatedComponent(ScrollView);
+
+const Comments = forwardRef<ScrollView>((props, ref) => {
   return (
-    <View>
+    <AnimatedScrollView
+      ref={ref}
+      showsVerticalScrollIndicator={false}
+      style={styles.container}
+      {...props}>
       <Text>Comments</Text>
-    </View>
+    </AnimatedScrollView>
   );
-};
+});
 
-export default Comments;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+
+export default memo(Comments);

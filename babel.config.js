@@ -20,6 +20,6 @@ module.exports = {
         ],
       },
     ],
-    'react-native-reanimated/plugin', // PUT IT HERE
+    'react-native-reanimated/plugin',
   ],
 };

@@ -13,6 +13,8 @@ import CarouselItem from './CarouselItem/CarouselItem';
 import ProjectCard from './ProjectCard/ProjectCard';
 import AroundYou from './AroundYou/AroundYou';
 import SupportProjectContainer from './SupportProjectContainer/SupportProjectContainer';
+import ProjectDetailsHeader from './ProjectDetailsHeader/ProjectDetailsHeader';
+import SupportContainer from './SupportContainer/SupportContainer';
 
 export {
   Indicator,
@@ -30,4 +32,6 @@ export {
   ProjectCard,
   AroundYou,
   SupportProjectContainer,
+  ProjectDetailsHeader,
+  SupportContainer,
 };

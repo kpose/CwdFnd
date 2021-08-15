@@ -28,7 +28,7 @@ interface Props {
 
 const HEADERHEIGHT = hp(73);
 
-const BackgroundImage = ({item, navigation}: Props) => {
+const ProjectDetailsHeader = ({item, navigation}: Props) => {
   return (
     <View style={{height: HEADERHEIGHT}}>
       <ImageBackground
@@ -113,4 +113,4 @@ const BackgroundImage = ({item, navigation}: Props) => {
   );
 };
 
-export default BackgroundImage;
+export default ProjectDetailsHeader;
