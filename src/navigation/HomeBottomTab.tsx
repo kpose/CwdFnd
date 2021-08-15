@@ -1,7 +1,7 @@
 import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {HomeBottomTabParamList} from '../types/NavigationTypes';
-import {Home, Search, Notifications, Profile, Project} from '~screens';
+import {Home, Explore, Notifications, Profile, Project} from '~screens';
 import {colors} from '~utils';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -19,7 +19,7 @@ function HomeBottomTab() {
       />
       <Tab.Screen
         name="Explore"
-        component={Search}
+        component={Explore}
         options={{
           tabBarIcon: ({color}) => (
             <Icon name="compass" color={color} size={26} />

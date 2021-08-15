@@ -5,7 +5,9 @@ const styles = StyleSheet.create({
   container: {
     height: hp(24),
     width: wp(43),
-    margin: wp(2),
+    //margin: wp(2),
+    marginRight: wp(2),
+    marginTop: wp(2),
     borderRadius: wp(2),
   },
   image: {

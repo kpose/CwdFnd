@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   featuredContainer: {
     marginLeft: wp(3),
     marginBottom: hp(1.5),
-    //marginTop: hp(1),
+    marginTop: hp(1),
     marginRight: wp(3),
   },
   rowHeader: {

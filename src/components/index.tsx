@@ -15,6 +15,7 @@ import AroundYou from './AroundYou/AroundYou';
 import SupportProjectContainer from './SupportProjectContainer/SupportProjectContainer';
 import ProjectDetailsHeader from './ProjectDetailsHeader/ProjectDetailsHeader';
 import SupportContainer from './SupportContainer/SupportContainer';
+import ProjectsFollowing from './ProjectsFollowing/ProjectsFollowing';
 
 export {
   Indicator,
@@ -34,4 +35,5 @@ export {
   SupportProjectContainer,
   ProjectDetailsHeader,
   SupportContainer,
+  ProjectsFollowing,
 };

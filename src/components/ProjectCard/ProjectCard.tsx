@@ -16,7 +16,7 @@ const ProjectCard = ({title, image, onPress}: Props) => {
     <Pressable onPress={onPress}>
       <Surface style={styles.container}>
         <Image source={image} style={styles.image} />
-        <Text numberOfLines={1} style={[fonts.body, styles.title]}>
+        <Text numberOfLines={2} style={[fonts.caption, styles.title]}>
           {title}
         </Text>
         <Divider style={styles.divider} />

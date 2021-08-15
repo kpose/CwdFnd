@@ -3,7 +3,7 @@ import OnBoarding from './OnBoarding/OnBoarding';
 import Signup from './Signup/Signup';
 import Signin from './Signin/Signin';
 import LinkBank from './LinkBank/LinkBank';
-import Search from './Search/Search';
+import Explore from './Explore/Explore';
 import Notifications from './Notifications/Notifications';
 import Profile from './Profile/Profile';
 import EnterEmail from './EnterEmail/EnterEmail';
@@ -27,7 +27,7 @@ export {
   Signin,
   Signup,
   LinkBank,
-  Search,
+  Explore,
   Notifications,
   Profile,
   EnterEmail,
