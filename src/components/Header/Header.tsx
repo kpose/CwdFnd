@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, SafeAreaView, Image} from 'react-native';
+import {View, SafeAreaView, Image, Pressable} from 'react-native';
 import {Text, Surface} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {colors, fonts, regularIconSize} from '~utils';
@@ -12,6 +12,8 @@ interface Props {
   rightIcon?: string;
   centerText?: string;
   centerImage?: string;
+  onLeftPress?: () => void;
+  onRightPress?: () => void;
 }
 
 const Header = ({
@@ -21,11 +23,13 @@ const Header = ({
   rightText,
   centerImage,
   centerText,
+  onLeftPress,
+  onRightPress,
 }: Props) => {
   return (
     <Surface style={styles.headerContainer}>
       <SafeAreaView style={styles.header}>
-        <View>
+        <Pressable onPress={onLeftPress}>
           {leftText && <Text style={[fonts.caption]}>{leftText}</Text>}
           {leftIcon && (
             <Icon
@@ -34,14 +38,18 @@ const Header = ({
               color={colors.PRIMARY}
             />
           )}
-        </View>
+        </Pressable>
 
         <View>
-          {centerText && <Text style={[fonts.title]}>{centerText}</Text>}
+          {centerText && (
+            <Text style={[fonts.title, {color: colors.PRIMARY}]}>
+              {centerText}
+            </Text>
+          )}
           {centerImage && <Image source={{uri: centerImage}} />}
         </View>
 
-        <View>
+        <Pressable onPress={onRightPress}>
           {rightText && <Text style={[fonts.caption]}>{rightText}</Text>}
           {rightIcon && (
             <Icon
@@ -50,7 +58,7 @@ const Header = ({
               color={colors.PRIMARY}
             />
           )}
-        </View>
+        </Pressable>
       </SafeAreaView>
     </Surface>
   );

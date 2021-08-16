@@ -11,7 +11,6 @@ interface Props {
 }
 
 const ProjectCard = ({title, image, onPress}: Props) => {
-  console.log(image);
   return (
     <Pressable onPress={onPress}>
       <Surface style={styles.container}>

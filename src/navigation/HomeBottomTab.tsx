@@ -1,7 +1,8 @@
 import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {HomeBottomTabParamList} from '../types/NavigationTypes';
-import {Home, Explore, Notifications, Profile, Project} from '~screens';
+import {Home, Explore, Notifications, Profile, AddProject} from '~screens';
+import AddProjectStack from './AddProjectStack';
 import {colors} from '~utils';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -29,7 +30,7 @@ function HomeBottomTab() {
 
       <Tab.Screen
         name="Project"
-        component={Project}
+        component={AddProjectStack}
         options={{
           tabBarIcon: ({color}) => (
             <Icon name="plus-square" color={color} size={26} />

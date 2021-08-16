@@ -11,8 +11,8 @@ enableScreens();
 const App = () => {
   return (
     <SafeAreaProvider>
-      <NavigationContainer theme={CombinedDarkTheme}>
-        <PaperProvider theme={CombinedDarkTheme}>
+      <NavigationContainer theme={CombinedLightTheme}>
+        <PaperProvider theme={CombinedLightTheme}>
           <WelcomeStack />
         </PaperProvider>
       </NavigationContainer>

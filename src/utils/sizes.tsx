@@ -31,8 +31,8 @@ export const fonts = StyleSheet.create({
     fontWeight: '700',
   },
   smallButtonText: {
-    fontSize: scale(15),
-    fontWeight: '600',
+    fontSize: scale(13),
+    fontWeight: '400',
   },
   caption: {
     fontSize: scale(12),

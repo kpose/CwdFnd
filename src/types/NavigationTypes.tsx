@@ -35,6 +35,11 @@ export type HomeStackParamList = {
   ProjectDetails: {item: {}};
 };
 
+export type AddProjectParamList = {
+  AddProject: undefined;
+  Step2: undefined;
+};
+
 /* Navigation params */
 type WelcomeStackRouteProp = RouteProp<WelcomeStackParamList, 'OnBoarding'>;
 
@@ -43,6 +48,7 @@ type HomeBottomTabRouteProp = MaterialBottomTabScreenProps<
   'Home'
 >;
 type HomeStackRouteProp = RouteProp<HomeStackParamList, 'BottomTabs'>;
+type AddProjectRouteProp = RouteProp<AddProjectParamList, 'AddProject'>;
 
 /* Route params */
 type WelcomeStackNavigationProp = NativeStackNavigationProp<
@@ -56,6 +62,11 @@ type HomeBottomTabNavigationProp = MaterialBottomTabNavigationProp<
 type HomeStackNavigationProp = NativeStackNavigationProp<
   HomeStackParamList,
   'BottomTabs'
+>;
+
+type AddProjectNavigationProp = NativeStackNavigationProp<
+  AddProjectParamList,
+  'AddProject'
 >;
 
 /* Props */
@@ -72,4 +83,9 @@ export type HomeBottomTabProps = {
 export type HomeStackProps = {
   navigation: HomeStackNavigationProp;
   route: HomeStackRouteProp;
+};
+
+export type AddProjectProps = {
+  navigation: AddProjectNavigationProp;
+  route: AddProjectRouteProp;
 };
