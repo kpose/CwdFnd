@@ -38,6 +38,7 @@ export type HomeStackParamList = {
 export type AddProjectParamList = {
   AddProject: undefined;
   Step2: undefined;
+  ProjectLaunch: undefined;
 };
 
 /* Navigation params */

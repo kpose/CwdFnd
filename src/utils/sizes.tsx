@@ -14,7 +14,7 @@ export const fonts = StyleSheet.create({
   },
   itemTitle: {
     fontSize: scale(17),
-    fontWeight: '500',
+    fontWeight: '600',
     letterSpacing: 0.41,
   },
   subheading: {

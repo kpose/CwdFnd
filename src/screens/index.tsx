@@ -22,6 +22,7 @@ import Campaign from './Campaign/Campaign';
 import Explore from './Explore/Explore';
 import AddProject from './AddProject/AddProject';
 import Step2 from './Step2/Step2';
+import ProjectLaunch from './ProjectLaunch/ProjectLaunch';
 
 export {
   Home,
@@ -48,4 +49,5 @@ export {
   Updates,
   AddProject,
   Step2,
+  ProjectLaunch,
 };

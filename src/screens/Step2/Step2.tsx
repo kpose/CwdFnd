@@ -5,11 +5,17 @@ import {Header, SmallButton} from '~components';
 import {colors, fonts} from '~utils';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {AddProjectProps} from '~types/NavigationTypes';
 
-const Step2 = () => {
+const Step2 = ({navigation}: AddProjectProps) => {
   return (
     <View>
-      <Header centerText="Start a Project" leftText="Back" rightText="Cancel" />
+      <Header
+        centerText="Start a Project"
+        leftText="Back"
+        rightText="Cancel"
+        onRightPress={() => navigation.navigate('Home')}
+      />
       <ScrollView>
         <View style={styles.titleContainer}>
           <Text style={[fonts.itemTitle]}>Step 2 of 2</Text>
@@ -47,7 +53,7 @@ const Step2 = () => {
           />
           <SmallButton
             title="Launch project"
-            onPress={() => console.log('milestone')}
+            onPress={() => navigation.navigate('ProjectLaunch')}
           />
         </View>
       </ScrollView>
