@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {View, ScrollView, Pressable, StyleSheet, TextInput} from 'react-native';
+import {
+  View,
+  ScrollView,
+  Pressable,
+  StyleSheet,
+  TextInput,
+  Image,
+} from 'react-native';
 import styles from './styles';
 import {Text, Surface} from 'react-native-paper';
 import RNPickerSelect from 'react-native-picker-select';
@@ -38,7 +45,7 @@ const projectcategory = [
   },
 ];
 
-const AddProject = ({navigation}: AddProjectProps) => {
+const UpdateProject = ({navigation}: AddProjectProps) => {
   const [category, setCategory] = useState('');
   const locationPlaceholder = {
     label: 'Select a location',
@@ -53,32 +60,28 @@ const AddProject = ({navigation}: AddProjectProps) => {
   return (
     <View style={styles.container}>
       <Header
-        centerText="Start a Project"
+        centerText="Edit Project"
         rightText="Cancel"
-        leftText="close"
-        onRightPress={() => navigation.navigate('Home')}
+        onRightPress={() => navigation.navigate('ProjectInfo')}
       />
       <ScrollView>
         <View style={styles.titleContainer}>
-          <Text style={[fonts.itemTitle, styles.step]}>Step 1 of 2</Text>
-          <Text style={[fonts.caption, styles.description]}>
-            Create a name for your project
-          </Text>
+          <Text style={[fonts.body, styles.description]}>Update title</Text>
 
           <TextInput style={[styles.txt, fonts.body]} />
           <Text style={[fonts.caption, styles.description2]}>
-            Tip: Titles should be eye-catching and describe your project
+            Tip: Tips should be short and sweet
           </Text>
         </View>
 
         <View style={styles.descriptionContainer}>
-          <Text style={[fonts.caption, styles.step]}>Add a description</Text>
+          <Text style={[fonts.body, styles.step]}>Description</Text>
           <TextInput style={[styles.desc, fonts.body]} multiline={true} />
         </View>
 
         <View style={styles.descriptionContainer}>
           <View style={styles.pickerRow}>
-            <Text style={[fonts.caption]}>Project category</Text>
+            <Text style={[fonts.caption]}>Date of update</Text>
             <RNPickerSelect
               placeholder={categoryPlaceholder}
               items={projectcategory}
@@ -101,49 +104,23 @@ const AddProject = ({navigation}: AddProjectProps) => {
           </View>
         </View>
 
-        <View style={styles.descriptionContainer}>
-          <View style={styles.pickerRow}>
-            <Text style={[fonts.caption]}>Location</Text>
-            <RNPickerSelect
-              placeholder={locationPlaceholder}
-              items={location}
-              onValueChange={language => setCategory(language)}
-              style={{
-                ...pickerSelectStyles,
-                iconContainer: {
-                  top: 10,
-                  right: 12,
-                },
-              }}
-              value={category}
-              useNativeAndroidPickerStyle={false}
-              Icon={() => {
-                return (
-                  <Icon
-                    name="location-arrow"
-                    size={20}
-                    color={colors.PRIMARY}
-                  />
-                );
-              }}
-            />
-          </View>
-        </View>
-
         <View style={styles.imageContainer}>
           <Text style={[fonts.caption, styles.upload]}>
-            Upload a cover photo
+            Add optional hotos or videos
           </Text>
           <Pressable>
             <Surface style={styles.picker}>
-              <Icon name="camera-retro" size={40} color={colors.LIGHT_GRAY} />
+              <Image
+                source={require('~assets/images/7.jpg')}
+                style={styles.image}
+              />
             </Surface>
           </Pressable>
         </View>
         <View style={styles.buttonContainer}>
           <SmallButton
-            title="Next >"
-            onPress={() => navigation.navigate('Step2')}
+            title="Add update"
+            onPress={() => navigation.navigate('ProjectInfo')}
           />
         </View>
       </ScrollView>
@@ -151,7 +128,7 @@ const AddProject = ({navigation}: AddProjectProps) => {
   );
 };
 
-export default AddProject;
+export default UpdateProject;
 
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {

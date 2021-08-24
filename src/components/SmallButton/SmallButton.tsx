@@ -39,10 +39,10 @@ export default SmallButton;
 
 const styles = StyleSheet.create({
   button: {
-    height: hp(5),
-    width: wp(40),
-    borderRadius: wp(2),
-    justifyContent: 'center',
+    height: hp(4),
     alignItems: 'center',
+    borderRadius: wp(2),
+    flexDirection: 'row',
+    alignSelf: 'flex-start',
   },
 });

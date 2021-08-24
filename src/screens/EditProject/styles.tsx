@@ -49,6 +49,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: hp(1),
   },
+  image: {
+    height: '100%',
+    width: '100%',
+    borderRadius: 8,
+  },
   buttonContainer: {
     alignItems: 'center',
     marginTop: hp(2),

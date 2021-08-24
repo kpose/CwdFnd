@@ -5,11 +5,13 @@ import {Header, SmallButton} from '~components';
 import {colors, fonts} from '~utils';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {AddProjectProps} from '~types/NavigationTypes';
 
-const ProjectLaunch = () => {
+const ProjectLaunch = ({navigation}: AddProjectProps) => {
   return (
     <View style={styles.container}>
       <Header centerText="Floata" />
+      <Text>Congratulatory image should be here</Text>
       <View style={styles.textContainer}>
         <Text style={[fonts.itemTitle, styles.title]}>
           Your project is launched & ready to go!
@@ -21,7 +23,7 @@ const ProjectLaunch = () => {
         <SmallButton
           title="View project"
           backgroundColor={colors.SECONDARY}
-          onPress={() => console.log('view')}
+          onPress={() => navigation.navigate('ProjectInfo')}
         />
       </View>
 

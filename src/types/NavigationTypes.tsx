@@ -39,6 +39,10 @@ export type AddProjectParamList = {
   AddProject: undefined;
   Step2: undefined;
   ProjectLaunch: undefined;
+  PreviewProject: undefined;
+  ProjectInfo: undefined;
+  EditProject: undefined;
+  UpdateProject: undefined;
 };
 
 /* Navigation params */

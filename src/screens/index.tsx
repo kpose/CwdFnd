@@ -23,6 +23,10 @@ import Explore from './Explore/Explore';
 import AddProject from './AddProject/AddProject';
 import Step2 from './Step2/Step2';
 import ProjectLaunch from './ProjectLaunch/ProjectLaunch';
+import PreviewProject from './PreviewProject/PreviewProject';
+import ProjectInfo from './ProjectInfo/ProjectInfo';
+import EditProject from './EditProject/EditProject';
+import UpdateProject from './UpdateProject/UpdateProject';
 
 export {
   Home,
@@ -50,4 +54,8 @@ export {
   AddProject,
   Step2,
   ProjectLaunch,
+  PreviewProject,
+  ProjectInfo,
+  EditProject,
+  UpdateProject,
 };

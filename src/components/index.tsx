@@ -16,6 +16,8 @@ import SupportProjectContainer from './SupportProjectContainer/SupportProjectCon
 import ProjectDetailsHeader from './ProjectDetailsHeader/ProjectDetailsHeader';
 import SupportContainer from './SupportContainer/SupportContainer';
 import ProjectsFollowing from './ProjectsFollowing/ProjectsFollowing';
+import PreviewProjectHeader from './PreviewProjectHeader/PreviewProjectHeader.tsx';
+import ProfileRow from './ProfileRow/ProfileRow';
 
 export {
   Indicator,
@@ -36,4 +38,6 @@ export {
   ProjectDetailsHeader,
   SupportContainer,
   ProjectsFollowing,
+  PreviewProjectHeader,
+  ProfileRow,
 };

@@ -36,7 +36,7 @@ export default BigButton;
 
 const styles = StyleSheet.create({
   button: {
-    height: hp(5),
+    height: hp(6),
     width: wp(90),
     borderRadius: wp(2),
     justifyContent: 'center',
