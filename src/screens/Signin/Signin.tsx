@@ -89,6 +89,7 @@ const Signin = ({navigation}: WelcomeStackProps) => {
                   {errors.email}
                 </Text>
               )}
+
               <TextInput
                 mode="outlined"
                 value={values.password}
