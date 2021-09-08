@@ -1,40 +1,58 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {render, fireEvent} from '@testing-library/react-native';
+import {render, fireEvent, cleanup} from '@testing-library/react-native';
 
 import WelcomeStack from '../src/navigation/WelcomeStack';
 
-jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
-jest.mock('react-native/Libraries/LogBox/LogBox');
-
 describe('Interaction test of onboarding page', () => {
+  afterEach(cleanup);
   test('page contains login and signup buttons', async () => {
     const component = (
       <NavigationContainer>
         <WelcomeStack />
       </NavigationContainer>
     );
-    const {findByText} = render(component);
-    const login = await findByText('Log in');
-    const signup = await findByText('Sign up');
+    const {getByText} = render(component);
+    const login = await getByText('Log in');
+    const signup = await getByText('Sign up');
 
     expect(login).toBeTruthy();
     expect(signup).toBeTruthy();
   });
 
-  test('open login and signup screens on button press', async () => {
+  test('open signup screen on button press', async () => {
     const component = (
       <NavigationContainer>
         <WelcomeStack />
       </NavigationContainer>
     );
 
-    const {findByText} = render(component);
+    const {getByText, getByTestId} = render(component);
+    const signupButton = await getByText('Sign up');
 
-    const loginButton = await findByText('Log in');
-    fireEvent(loginButton, 'press');
-    const loignScreen = await findByText('Welcome Back,');
+    fireEvent.press(signupButton);
+    const signupScreenTitle = await getByText('Sign up to get started');
+    const mobileNumber = await getByTestId('mobileNumber');
+    const email = await getByTestId('email');
 
-    expect(loignScreen).toBeTruthy();
+    expect(signupScreenTitle).toBeTruthy();
+    expect(mobileNumber).toBeTruthy();
+    expect(email).toBeTruthy();
+  });
+
+  test('open signin screen on button press', async () => {
+    const component = (
+      <NavigationContainer>
+        <WelcomeStack />
+      </NavigationContainer>
+    );
+
+    const {getByText} = render(component);
+    const signinButton = await getByText('Log in');
+
+    fireEvent.press(signinButton);
+    const signinScreenTitle = await getByText('Welcome Back,');
+
+    expect(signinScreenTitle).toBeTruthy();
   });
 });

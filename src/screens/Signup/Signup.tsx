@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, SafeAreaView, Image} from 'react-native';
+import {View, SafeAreaView, Image, Pressable} from 'react-native';
 import {Text} from 'react-native-paper';
 import {fonts, colors} from '~utils';
 import styles from './styles';
@@ -24,10 +24,12 @@ const Signup = ({navigation}: WelcomeStackProps) => {
           <BigButton
             title="Sign up with mobile number"
             onPress={() => navigation.navigate('HomeStack')}
+            testID="mobileNumber"
           />
           <BigButton
             title="Sign up using Email"
             onPress={() => navigation.navigate('EnterEmail')}
+            testID="email"
           />
         </View>
         <View style={styles.iconContainer}>
@@ -46,7 +48,9 @@ const Signup = ({navigation}: WelcomeStackProps) => {
         </View>
         <View style={styles.bottomText}>
           <Text style={[fonts.body]}>Already a member?</Text>
-          <Text style={[fonts.body, styles.signin]}>Sign in</Text>
+          <Pressable onPress={() => navigation.navigate('Signin')}>
+            <Text style={[fonts.body, styles.signin]}>Sign in</Text>
+          </Pressable>
         </View>
       </SafeAreaView>
     </LinearGradient>

@@ -16,7 +16,7 @@ const OnBoardingButtons = ({scrollX}: any) => {
         children="Log in"
         labelStyle={[fonts.smallButtonText, {color: colors.PRIMARY}]}
         color={colors.WHITE}
-        //onPress={() => navigation.navigate('Signin')}
+        onPress={() => navigation.navigate('Signin')}
       />
 
       <Button
