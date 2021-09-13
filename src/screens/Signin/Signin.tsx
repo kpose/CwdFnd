@@ -1,5 +1,11 @@
 import React, {useRef} from 'react';
-import {View, Pressable, Image, KeyboardAvoidingView} from 'react-native';
+import {
+  View,
+  Pressable,
+  Image,
+  KeyboardAvoidingView,
+  SafeAreaView,
+} from 'react-native';
 import styles from './styles';
 import {Text, TextInput} from 'react-native-paper';
 import {WavyHeader, SmallButton} from '../../components';
@@ -35,18 +41,26 @@ const Signin = ({navigation}: WelcomeStackProps) => {
         customWavePattern="M0,224L48,218.7C96,213,192,203,288,192C384,181,480,171,576,154.7C672,139,768,117,864,106.7C960,96,1056,96,1152,133.3C1248,171,1344,245,1392,282.7L1440,320L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
       />
 
-      <Pressable onPress={() => navigation.navigate('OnBoarding')}>
-        <Icon name="close" size={20} style={styles.icon} color={colors.WHITE} />
-      </Pressable>
-      <View style={styles.headerContainer}>
-        <Text style={[fonts.title]}>Welcome Back,</Text>
-        <Text style={[fonts.headerTitle]}>Log In!</Text>
-      </View>
+      <SafeAreaView style={{marginLeft: wp(5)}}>
+        <Pressable onPress={() => navigation.navigate('OnBoarding')}>
+          <Icon
+            name="close"
+            size={24}
+            //style={styles.icon}
+            color={colors.WHITE}
+          />
+        </Pressable>
+
+        <View style={styles.headerContainer}>
+          <Text style={[fonts.title]}>Welcome Back,</Text>
+          <Text style={[fonts.headerTitle]}>Log In!</Text>
+        </View>
+      </SafeAreaView>
 
       <View style={styles.inputContainer}>
         <Formik
           validationSchema={schema}
-          validateOnChange={false}
+          validateOnChange={true}
           //validateOnMount={false}
           initialValues={{email: '', password: ''}}
           onSubmit={values => console.log(values)}>
@@ -126,16 +140,30 @@ const Signin = ({navigation}: WelcomeStackProps) => {
                 {!values.email && (
                   <View style={{flexDirection: 'row', alignItems: 'center'}}>
                     <Icon
-                      name="check-square-o"
+                      name="edit"
                       size={20}
                       style={styles.validatorIcon}
-                      color={colors.PRIMARY}
+                      color={colors.LIGHT_GRAY}
                     />
-                    <Text style={[fonts.caption, {color: colors.PRIMARY}]}>
-                      should be Valid email address
+                    <Text style={[fonts.caption, {color: colors.LIGHT_GRAY}]}>
+                      Should be valid email address
                     </Text>
                   </View>
                 )}
+
+                {values.email && errors.email ? (
+                  <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <Icon
+                      name="edit"
+                      size={20}
+                      style={styles.validatorIcon}
+                      color={colors.LIGHT_GRAY}
+                    />
+                    <Text style={[fonts.caption, {color: colors.LIGHT_GRAY}]}>
+                      Typing ...
+                    </Text>
+                  </View>
+                ) : null}
 
                 {values.email && !errors.email ? (
                   <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -143,11 +171,10 @@ const Signin = ({navigation}: WelcomeStackProps) => {
                       name="check-square-o"
                       size={20}
                       style={styles.validatorIcon}
-                      color={colors.PRIMARY_LIGHT}
+                      color={colors.PRIMARY}
                     />
-                    <Text
-                      style={[fonts.caption, {color: colors.PRIMARY_LIGHT}]}>
-                      Valid email address
+                    <Text style={[fonts.caption, {color: colors.PRIMARY}]}>
+                      Should be valid email address
                     </Text>
                   </View>
                 ) : null}
@@ -155,17 +182,31 @@ const Signin = ({navigation}: WelcomeStackProps) => {
                 {!values.password && (
                   <View style={{flexDirection: 'row', alignItems: 'center'}}>
                     <Icon
-                      name="check-square-o"
+                      name="edit"
                       size={20}
                       style={styles.validatorIcon}
-                      color={colors.PRIMARY}
+                      color={colors.LIGHT_GRAY}
                     />
-                    <Text style={[fonts.caption, {color: colors.PRIMARY}]}>
-                      Pasword: At least One Uppercase, One Lowercase, One Number
-                      and One Special Case Character
+                    <Text style={[fonts.caption, {color: colors.LIGHT_GRAY}]}>
+                      Password: At least One Uppercase, One Lowercase, One
+                      Number, and One Special Case Character
                     </Text>
                   </View>
                 )}
+
+                {values.password && errors.password ? (
+                  <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <Icon
+                      name="edit"
+                      size={20}
+                      style={styles.validatorIcon}
+                      color={colors.LIGHT_GRAY}
+                    />
+                    <Text style={[fonts.caption, {color: colors.LIGHT_GRAY}]}>
+                      Unacceptable password format
+                    </Text>
+                  </View>
+                ) : null}
 
                 {values.password && !errors.password ? (
                   <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -173,12 +214,12 @@ const Signin = ({navigation}: WelcomeStackProps) => {
                       name="check-square-o"
                       size={20}
                       style={styles.validatorIcon}
-                      color={colors.PRIMARY_LIGHT}
+                      color={colors.PRIMARY}
                     />
                     <Text
                       style={[
                         fonts.caption,
-                        {color: colors.PRIMARY_LIGHT, alignSelf: 'center'},
+                        {color: colors.PRIMARY, alignSelf: 'center'},
                       ]}>
                       Pasword: At least One Uppercase, One Lowercase, One Number
                       and One Special Case Character
@@ -195,14 +236,42 @@ const Signin = ({navigation}: WelcomeStackProps) => {
                   title="Log in"
                   onPress={handleSubmit}
                   testID="loginButton"
-                  disabled={!isValid}
+                  //disabled={!isValid}
                 />
               </View>
             </>
           )}
         </Formik>
       </View>
-      {/* <View style={styles.socialContainer}>
+
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'row',
+          marginTop: hp(3),
+        }}>
+        <Text style={[fonts.caption, {marginRight: wp(1)}]}>
+          Don't have an account?
+        </Text>
+        <Pressable onPress={() => navigation.navigate('Signup')}>
+          <Text
+            style={[
+              fonts.caption,
+              {textDecorationLine: 'underline', color: colors.SECONDARY},
+            ]}>
+            Click here
+          </Text>
+        </Pressable>
+      </View>
+    </KeyboardAvoidingView>
+  );
+};
+
+export default Signin;
+
+{
+  /* <View style={styles.socialContainer}>
         <Text style={[fonts.caption, {marginBottom: hp(0)}]}>OR</Text>
         <Text style={[fonts.caption]}>Login with social media</Text>
         <View style={{flexDirection: 'row', marginTop: hp(1)}}>
@@ -226,29 +295,5 @@ const Signin = ({navigation}: WelcomeStackProps) => {
             />
           </Pressable>
         </View>
-      </View> */}
-      <View
-        style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'row',
-          marginTop: hp(3),
-        }}>
-        <Text style={[fonts.caption, {marginRight: wp(1)}]}>
-          Don't have an account?
-        </Text>
-        <Pressable onPress={() => navigation.navigate('Signup')}>
-          <Text
-            style={[
-              fonts.caption,
-              {textDecorationLine: 'underline', color: colors.PRIMARY},
-            ]}>
-            Click here
-          </Text>
-        </Pressable>
-      </View>
-    </KeyboardAvoidingView>
-  );
-};
-
-export default Signin;
+      </View> */
+}
