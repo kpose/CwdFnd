@@ -6,9 +6,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
-    marginTop: hp(5),
-    marginHorizontal: wp(4),
-    padding: wp(3),
+    marginTop: hp(2),
+    //marginHorizontal: wp(4),
+    //padding: wp(3),
   },
   headerTitle: {
     //marginBottom: hp(1),
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     marginBottom: hp(5),
   },
   inputContainer: {
-    marginTop: hp(7),
+    marginTop: hp(9),
     alignSelf: 'center',
     marginLeft: wp(5),
     marginRight: wp(5),
@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
   forgot: {
     textAlign: 'right',
     marginBottom: hp(2),
+    color: colors.SECONDARY,
   },
   socialContainer: {
     alignItems: 'center',
