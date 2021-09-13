@@ -1,9 +1,15 @@
 import * as React from 'react';
-import {render, cleanup, fireEvent} from '@testing-library/react-native';
+import {
+  render,
+  cleanup,
+  fireEvent,
+  waitFor,
+} from '@testing-library/react-native';
 import {Signin} from '../src/screens';
 
 describe('Testing signin screen', () => {
   afterEach(cleanup);
+
   test('Must require a valid email', async () => {
     const component = <Signin />;
     const email = 'user@mail.com';
@@ -13,10 +19,8 @@ describe('Testing signin screen', () => {
     const {getByTestId} = render(component);
 
     const emailField = await getByTestId('emailInputField');
-    const loginButton = await getByTestId('loginButton');
 
     fireEvent.changeText(emailField, email);
-    fireEvent.press(loginButton);
 
     expect(emailField.props.value).toMatch(emailRegex);
   });
@@ -30,11 +34,25 @@ describe('Testing signin screen', () => {
     const {getByTestId} = render(component);
 
     const passwordField = await getByTestId('passwordInputField');
-    const loginButton = await getByTestId('loginButton');
 
     fireEvent.changeText(passwordField, password);
-    fireEvent.press(loginButton);
 
     expect(passwordField.props.value).toMatch(passwordRegex);
+  });
+
+  test('Display Email and Password error when nothing is entered', async () => {
+    const component = <Signin />;
+    const emailError = 'Enter a valid email';
+    const passwordError = 'Please Enter your password';
+
+    const {getByTestId, getByText} = render(component);
+    const loginButton = await getByTestId('loginButton');
+
+    fireEvent.press(loginButton);
+
+    await waitFor(() => {
+      expect(getByText(emailError)).toBeTruthy();
+      expect(getByText(passwordError)).toBeTruthy();
+    });
   });
 });

@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     marginBottom: hp(5),
   },
   inputContainer: {
-    marginTop: hp(7),
+    marginTop: hp(9),
     alignSelf: 'center',
     marginLeft: wp(5),
     marginRight: wp(5),

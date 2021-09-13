@@ -85,7 +85,8 @@ const Signin = ({navigation}: WelcomeStackProps) => {
                       //marginBottom: hp(3),
                       marginLeft: wp(2),
                     },
-                  ]}>
+                  ]}
+                  testID="emailError">
                   {errors.email}
                 </Text>
               )}
@@ -115,7 +116,8 @@ const Signin = ({navigation}: WelcomeStackProps) => {
                       //marginBottom: hp(3),
                       marginLeft: wp(2),
                     },
-                  ]}>
+                  ]}
+                  testID="passwordError">
                   {errors.password}
                 </Text>
               )}
