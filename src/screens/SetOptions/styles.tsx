@@ -25,8 +25,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: wp(2),
     height: hp(10),
-    width: '100%',
+
+    //width: '100%',
     backgroundColor: colors.PRIMARY_LIGHT,
+    alignSelf: 'center',
+    width: wp(93),
   },
   title: {
     marginBottom: hp(1),

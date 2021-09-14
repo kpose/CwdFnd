@@ -12,6 +12,25 @@ const Signup = ({navigation}: WelcomeStackProps) => {
   const [selectedNew, setSelectedNew] = useState(false);
   const [selectedBasic, setSelectedBasic] = useState(false);
   const [selectedPro, setSelectedPro] = useState(false);
+
+  const selectNew = () => {
+    setSelectedNew(!selectedNew);
+    setSelectedBasic(false);
+    setSelectedPro(false);
+  };
+
+  const selectBasic = () => {
+    setSelectedBasic(!selectedBasic);
+    setSelectedNew(false);
+    setSelectedPro(false);
+  };
+
+  const selectPro = () => {
+    setSelectedPro(!selectedPro);
+    setSelectedNew(false);
+    setSelectedBasic(false);
+  };
+
   return (
     <LinearGradient
       colors={[colors.PRIMARY, colors.PRIMARY, colors.PRIMARY_LIGHT]}
@@ -24,16 +43,14 @@ const Signup = ({navigation}: WelcomeStackProps) => {
           </Text>
         </View>
 
-        <Pressable
-          style={styles.optionsContainer}
-          onPress={() => setSelectedNew(!selectedNew)}>
+        <Pressable style={styles.optionsContainer} onPress={selectNew}>
           <Icon
             name={selectedNew ? 'check-circle' : 'minus-circle'}
             size={navigationIconSize}
             color={selectedNew ? colors.SECONDARY : colors.WHITE}
             style={{marginLeft: wp(2)}}
           />
-          <View style={{marginLeft: wp(3)}}>
+          <View style={{marginLeft: wp(3), width: wp(80)}}>
             <Text style={[fonts.textInput, styles.title]}>
               I am new to the market
             </Text>
@@ -41,16 +58,14 @@ const Signup = ({navigation}: WelcomeStackProps) => {
           </View>
         </Pressable>
 
-        <Pressable
-          style={styles.optionsContainer}
-          onPress={() => setSelectedBasic(!selectedBasic)}>
+        <Pressable style={styles.optionsContainer} onPress={selectBasic}>
           <Icon
             name={selectedBasic ? 'check-circle' : 'minus-circle'}
             size={navigationIconSize}
             color={selectedBasic ? colors.SECONDARY : colors.WHITE}
             style={{marginLeft: wp(2)}}
           />
-          <View style={{marginLeft: wp(3)}}>
+          <View style={{marginLeft: wp(3), width: wp(80)}}>
             <Text style={[fonts.textInput, styles.title]}>
               I have some basic knowledge about funding
             </Text>
@@ -60,16 +75,14 @@ const Signup = ({navigation}: WelcomeStackProps) => {
           </View>
         </Pressable>
 
-        <Pressable
-          style={styles.optionsContainer}
-          onPress={() => setSelectedPro(!selectedPro)}>
+        <Pressable style={styles.optionsContainer} onPress={selectPro}>
           <Icon
             name={selectedPro ? 'check-circle' : 'minus-circle'}
             size={navigationIconSize}
             color={selectedPro ? colors.SECONDARY : colors.WHITE}
             style={{marginLeft: wp(2)}}
           />
-          <View style={{marginLeft: wp(3)}}>
+          <View style={{marginLeft: wp(3), width: wp(80)}}>
             <Text style={[fonts.textInput, styles.title]}>
               I am an experienced personnel
             </Text>
