@@ -85,7 +85,8 @@ const EnterEmail = ({navigation}: WelcomeStackProps) => {
                     {
                       color: colors.WARNING,
                     },
-                  ]}>
+                  ]}
+                  testID="errorText">
                   {errors.email}
                 </Text>
               )}
@@ -93,6 +94,7 @@ const EnterEmail = ({navigation}: WelcomeStackProps) => {
                 <BigButton
                   title="Confirm"
                   onPress={handleSubmit}
+                  testID="confirmButton"
                   //disabled={!isValid}
                 />
               </View>
