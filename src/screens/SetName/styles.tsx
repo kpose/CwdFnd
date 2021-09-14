@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginLeft: wp(4),
     marginRight: wp(4),
+    marginTop: hp(2),
   },
   titleContainer: {
     marginTop: hp(5),

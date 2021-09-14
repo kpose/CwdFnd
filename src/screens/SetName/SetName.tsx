@@ -13,13 +13,12 @@ import * as yup from 'yup';
 const schema = yup.object().shape({
   fullname: yup
     .string()
-    .matches(/(\w.+\s).+/, 'Enter at least 2 names')
+    .matches(/[a-zA-Z]+\s+[a-zA-Z]+/g, 'Enter at least 2 names')
     .required('Full name is required'),
 });
 
 const SetName = ({navigation}: WelcomeStackProps) => {
   const onSubmit = (values: {}) => {
-    console.log(values);
     navigation.navigate('SetOptions');
   };
   return (
