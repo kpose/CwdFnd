@@ -1,9 +1,9 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {hp, wp} from '~utils';
 
 const styles = StyleSheet.create({
   headerContainer: {
-    height: hp(11),
+    height: Platform.OS === 'android' ? hp(8) : hp(11),
     width: '100%',
     justifyContent: 'center',
     marginBottom: hp(1),
