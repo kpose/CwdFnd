@@ -24,10 +24,11 @@ const BigButton = ({
       style={[styles.button, containerStyle]}
       mode="contained"
       loading={false}
+      labelStyle={[fonts.bigButtonText]}
       uppercase={false}
       testID={testID}
       disabled={disabled}>
-      <Text style={[fonts.bigButtonText]}>{title}</Text>
+      {title}
     </Button>
   );
 };

@@ -22,7 +22,6 @@ const schema = yup.object().shape({
 
 const SetPassword = ({navigation}: WelcomeStackProps) => {
   const onSubmit = (values: {}) => {
-    console.log(values);
     navigation.navigate('SetName');
   };
 
@@ -42,9 +41,10 @@ const SetPassword = ({navigation}: WelcomeStackProps) => {
           <Text style={[fonts.caption, {marginLeft: wp(1)}]}>Back</Text>
         </Pressable>
         <View style={styles.titleContainer}>
-          <Text style={[fonts.title]}>Enter your Email Address</Text>
+          <Text style={[fonts.title]}>Set a password for your account</Text>
           <Text style={[fonts.caption, styles.description]}>
-            Enter your email address to register your account
+            Password should contain a capital letter, a small letter, a number
+            and a special character.
           </Text>
         </View>
 
@@ -86,7 +86,8 @@ const SetPassword = ({navigation}: WelcomeStackProps) => {
                     {
                       color: colors.WARNING,
                     },
-                  ]}>
+                  ]}
+                  testID="errorText">
                   {errors.password}
                 </Text>
               )}
@@ -94,6 +95,7 @@ const SetPassword = ({navigation}: WelcomeStackProps) => {
                 <BigButton
                   title="Confirm"
                   onPress={handleSubmit}
+                  testID="confirmButton"
                   //disabled={!isValid}
                 />
               </View>

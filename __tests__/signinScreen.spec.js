@@ -22,7 +22,9 @@ describe('Testing signin screen', () => {
 
     fireEvent.changeText(emailField, email);
 
-    expect(emailField.props.value).toMatch(emailRegex);
+    await waitFor(() => {
+      expect(emailField.props.value).toMatch(emailRegex);
+    });
   });
 
   test('Password must contain upper, lower, number, special and at least 8 characters', async () => {
@@ -37,7 +39,9 @@ describe('Testing signin screen', () => {
 
     fireEvent.changeText(passwordField, password);
 
-    expect(passwordField.props.value).toMatch(passwordRegex);
+    await waitFor(() => {
+      expect(passwordField.props.value).toMatch(passwordRegex);
+    });
   });
 
   test('Display Email and Password error when nothing is entered', async () => {
