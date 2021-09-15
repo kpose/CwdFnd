@@ -27,6 +27,7 @@ import PreviewProject from './PreviewProject/PreviewProject';
 import ProjectInfo from './ProjectInfo/ProjectInfo';
 import EditProject from './EditProject/EditProject';
 import UpdateProject from './UpdateProject/UpdateProject';
+import Inbox from './Inbox/Inbox';
 
 export {
   Home,
@@ -58,4 +59,5 @@ export {
   ProjectInfo,
   EditProject,
   UpdateProject,
+  Inbox,
 };

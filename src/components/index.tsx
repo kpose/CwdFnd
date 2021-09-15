@@ -18,6 +18,7 @@ import SupportContainer from './SupportContainer/SupportContainer';
 import ProjectsFollowing from './ProjectsFollowing/ProjectsFollowing';
 import PreviewProjectHeader from './PreviewProjectHeader/PreviewProjectHeader.tsx';
 import ProfileRow from './ProfileRow/ProfileRow';
+import MessageRow from './MessageRow/MessageRow';
 
 export {
   Indicator,
@@ -40,4 +41,5 @@ export {
   ProjectsFollowing,
   PreviewProjectHeader,
   ProfileRow,
+  MessageRow,
 };

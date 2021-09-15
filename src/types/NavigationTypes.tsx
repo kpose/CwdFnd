@@ -33,6 +33,7 @@ export type HomeBottomTabParamList = {
 export type HomeStackParamList = {
   BottomTabs: undefined;
   ProjectDetails: {item: {}};
+  MessageStack: undefined;
 };
 
 export type AddProjectParamList = {
@@ -45,6 +46,10 @@ export type AddProjectParamList = {
   UpdateProject: undefined;
 };
 
+export type MessageStackParamList = {
+  Inbox: undefined;
+};
+
 /* Navigation params */
 type WelcomeStackRouteProp = RouteProp<WelcomeStackParamList, 'OnBoarding'>;
 
@@ -54,6 +59,7 @@ type HomeBottomTabRouteProp = MaterialBottomTabScreenProps<
 >;
 type HomeStackRouteProp = RouteProp<HomeStackParamList, 'BottomTabs'>;
 type AddProjectRouteProp = RouteProp<AddProjectParamList, 'AddProject'>;
+type MessageStackRouteProp = RouteProp<MessageStackParamList, 'Inbox'>;
 
 /* Route params */
 type WelcomeStackNavigationProp = NativeStackNavigationProp<
@@ -72,6 +78,11 @@ type HomeStackNavigationProp = NativeStackNavigationProp<
 type AddProjectNavigationProp = NativeStackNavigationProp<
   AddProjectParamList,
   'AddProject'
+>;
+
+type MessageStackNavigationProp = NativeStackNavigationProp<
+  MessageStackParamList,
+  'Inbox'
 >;
 
 /* Props */
@@ -93,4 +104,9 @@ export type HomeStackProps = {
 export type AddProjectProps = {
   navigation: AddProjectNavigationProp;
   route: AddProjectRouteProp;
+};
+
+export type MessageStackProps = {
+  navigation: MessageStackNavigationProp;
+  route: MessageStackRouteProp;
 };
