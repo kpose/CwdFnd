@@ -19,7 +19,6 @@ const schema = yup.object().shape({
 
 const SetName = ({navigation}: WelcomeStackProps) => {
   const onSubmit = (values: {}) => {
-    console.log(values);
     navigation.navigate('SetOptions');
   };
   return (

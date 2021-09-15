@@ -19,7 +19,6 @@ const schema = yup.object().shape({
 
 const EnterEmail = ({navigation}: WelcomeStackProps) => {
   const onSubmit = (values: {}) => {
-    console.log(values);
     navigation.navigate('SetPassword');
   };
 

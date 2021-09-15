@@ -43,7 +43,10 @@ const Signup = ({navigation}: WelcomeStackProps) => {
           </Text>
         </View>
 
-        <Pressable style={styles.optionsContainer} onPress={selectNew}>
+        <Pressable
+          style={styles.optionsContainer}
+          onPress={selectNew}
+          testID="new">
           <Icon
             name={selectedNew ? 'check-circle' : 'minus-circle'}
             size={navigationIconSize}
@@ -94,6 +97,9 @@ const Signup = ({navigation}: WelcomeStackProps) => {
           <BigButton
             title="Continue"
             onPress={() => navigation.navigate('SetCategories')}
+            disabled={
+              selectedNew || selectedPro || selectedBasic ? false : true
+            }
           />
         </View>
       </SafeAreaView>

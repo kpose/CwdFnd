@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
   description: {
     marginTop: hp(2),
     color: colors.LIGHT_GRAY,
-    width: wp(90),
     fontWeight: 'bold',
   },
   bottomContainer: {
