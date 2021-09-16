@@ -29,6 +29,7 @@ import EditProject from './EditProject/EditProject';
 import UpdateProject from './UpdateProject/UpdateProject';
 import Inbox from './Inbox/Inbox';
 import InboxSuggested from './InboxSuggested/InboxSuggested';
+import MessageConversation from './MessageConversation/MessageConversation';
 
 export {
   Home,
@@ -62,4 +63,5 @@ export {
   UpdateProject,
   Inbox,
   InboxSuggested,
+  MessageConversation,
 };

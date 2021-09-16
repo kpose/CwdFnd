@@ -1,15 +1,19 @@
 import React from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {View, Image, StyleSheet, Pressable} from 'react-native';
 import {Text, Divider} from 'react-native-paper';
 import {fonts, hp, wp} from '~utils';
+import {useNavigation} from '@react-navigation/native';
 
 const SuggestedRowItem = () => {
+  const navigation = useNavigation();
   return (
     <>
-      <View style={styles.container}>
+      <Pressable
+        style={styles.container}
+        onPress={() => navigation.navigate('MessageConversation')}>
         <Image source={require('~assets/images/8.jpg')} style={styles.image} />
         <Text style={[styles.name, fonts.caption]}>Samantha Chan</Text>
-      </View>
+      </Pressable>
       <Divider style={styles.divider} />
     </>
   );

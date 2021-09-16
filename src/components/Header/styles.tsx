@@ -4,17 +4,16 @@ import {hp, wp} from '~utils';
 const styles = StyleSheet.create({
   headerContainer: {
     height: Platform.OS === 'android' ? hp(8) : hp(11),
-    width: '100%',
-    justifyContent: 'center',
     marginBottom: hp(1),
   },
   header: {
     flexDirection: 'row',
-    //height: hp(9),
-    marginLeft: wp(4),
-    marginRight: wp(4),
-    justifyContent: 'space-between',
+    marginHorizontal: wp(4),
     alignItems: 'center',
+    height: '100%',
+  },
+  itemBlock: {
+    width: wp(92) / 3,
   },
 });
 

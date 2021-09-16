@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   },
   title: {
     marginBottom: hp(2),
+    fontWeight: 'bold',
   },
   suggestedContainer: {
     marginTop: hp(6),
