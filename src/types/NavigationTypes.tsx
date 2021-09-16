@@ -48,6 +48,7 @@ export type AddProjectParamList = {
 
 export type MessageStackParamList = {
   Inbox: undefined;
+  InboxSuggested: undefined;
 };
 
 /* Navigation params */

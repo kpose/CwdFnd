@@ -77,7 +77,7 @@ function WelcomeStack() {
       <Stack.Screen
         name="HomeStack"
         component={HomeStack}
-        options={{headerShown: false}}
+        options={{headerShown: false, gestureEnabled: false}}
       />
     </Stack.Navigator>
   );

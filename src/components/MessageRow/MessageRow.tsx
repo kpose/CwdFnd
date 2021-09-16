@@ -5,7 +5,7 @@ import {fonts} from '~utils';
 import styles from './styles';
 
 interface Props {
-  unread: boolean;
+  unread?: boolean;
 }
 
 const MessageRow = ({unread}: Props) => {

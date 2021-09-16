@@ -1,6 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Inbox} from '../screens';
+import {Inbox, InboxSuggested} from '../screens';
 import HomeBottomTab from './HomeBottomTab';
 import {MessageStackParamList} from '../types/NavigationTypes';
 
@@ -12,6 +12,12 @@ function MessageStack() {
       <Stack.Screen
         name="Inbox"
         component={Inbox}
+        options={{headerShown: false}}
+      />
+
+      <Stack.Screen
+        name="InboxSuggested"
+        component={InboxSuggested}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

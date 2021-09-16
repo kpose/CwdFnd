@@ -28,6 +28,7 @@ import ProjectInfo from './ProjectInfo/ProjectInfo';
 import EditProject from './EditProject/EditProject';
 import UpdateProject from './UpdateProject/UpdateProject';
 import Inbox from './Inbox/Inbox';
+import InboxSuggested from './InboxSuggested/InboxSuggested';
 
 export {
   Home,
@@ -60,4 +61,5 @@ export {
   EditProject,
   UpdateProject,
   Inbox,
+  InboxSuggested,
 };
