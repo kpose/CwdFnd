@@ -84,9 +84,3 @@ function WelcomeStack() {
 }
 
 export default WelcomeStack;
-
-/* options={{
-          replaceAnimation: 'push',
-          stackPresentation: 'modal',
-          stackAnimation: 'flip',
-        }} */
